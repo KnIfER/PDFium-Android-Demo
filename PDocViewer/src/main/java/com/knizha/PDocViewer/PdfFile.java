@@ -69,18 +69,12 @@ class PdfFile {
      * else the largest page fits and other pages scale relatively
      */
     private final boolean fitEachPage;
-    /**
-     * The pages the user want to display in order
-     * (ex: 0, 2, 2, 8, 8, 1, 1, 1)
-     */
-    private int[] originalUserPages;
 
-    PdfFile(PdfiumCore pdfiumCore, PdfDocument pdfDocument, FitPolicy pageFitPolicy, Size viewSize, int[] originalUserPages,
-            boolean isVertical, int spacing, boolean autoSpacing, boolean fitEachPage) {
+    PdfFile(PdfiumCore pdfiumCore, PdfDocument pdfDocument, FitPolicy pageFitPolicy, Size viewSize,
+			boolean isVertical, int spacing, boolean autoSpacing, boolean fitEachPage) {
         this.pdfiumCore = pdfiumCore;
         this.pdfDocument = pdfDocument;
         this.pageFitPolicy = pageFitPolicy;
-        this.originalUserPages = originalUserPages;
         this.isVertical = isVertical;
         this.spacingPx = spacing;
         this.autoSpacing = autoSpacing;
@@ -89,11 +83,7 @@ class PdfFile {
     }
 
     private void setup(Size viewSize) {
-        if (originalUserPages != null) {
-            pagesCount = originalUserPages.length;
-        } else {
-            pagesCount = pdfiumCore.getPageCount(pdfDocument);
-        }
+		pagesCount = pdfiumCore.getPageCount(pdfDocument);
 
         for (int i = 0; i < pagesCount; i++) {
             Size pageSize = pdfiumCore.getPageSize(pdfDocument, documentPage(i));
@@ -327,7 +317,6 @@ class PdfFile {
         }
 
         pdfDocument = null;
-        originalUserPages = null;
     }
 
     /**
@@ -342,27 +331,14 @@ class PdfFile {
         if (userPage <= 0) {
             return 0;
         }
-        if (originalUserPages != null) {
-            if (userPage >= originalUserPages.length) {
-                return originalUserPages.length - 1;
-            }
-        } else {
-            if (userPage >= getPagesCount()) {
-                return getPagesCount() - 1;
-            }
-        }
+		if (userPage >= getPagesCount()) {
+			return getPagesCount() - 1;
+		}
         return userPage;
     }
 
     public int documentPage(int userPage) {
         int documentPage = userPage;
-        if (originalUserPages != null) {
-            if (userPage < 0 || userPage >= originalUserPages.length) {
-                return -1;
-            } else {
-                documentPage = originalUserPages[userPage];
-            }
-        }
 
         if (documentPage < 0 || userPage >= getPagesCount()) {
             return -1;

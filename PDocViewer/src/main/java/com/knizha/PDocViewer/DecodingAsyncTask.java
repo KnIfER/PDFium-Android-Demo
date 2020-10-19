@@ -33,12 +33,10 @@ class DecodingAsyncTask extends AsyncTask<Void, Void, Throwable> {
     private PdfiumCore pdfiumCore;
     private String password;
     private DocumentSource docSource;
-    private int[] userPages;
     private PdfFile pdfFile;
 
-    DecodingAsyncTask(DocumentSource docSource, String password, int[] userPages, PDocView pDocView, PdfiumCore pdfiumCore) {
+    DecodingAsyncTask(DocumentSource docSource, String password, PDocView pDocView, PdfiumCore pdfiumCore) {
         this.docSource = docSource;
-        this.userPages = userPages;
         this.cancelled = false;
         this.pdfViewReference = new WeakReference<>(pDocView);
         this.password = password;
@@ -52,7 +50,7 @@ class DecodingAsyncTask extends AsyncTask<Void, Void, Throwable> {
             if (pDocView != null) {
                 PdfDocument pdfDocument = docSource.createDocument(pDocView.getContext(), pdfiumCore, password);
                 pdfFile = new PdfFile(pdfiumCore, pdfDocument, pDocView.getPageFitPolicy(), getViewSize(pDocView),
-                        userPages, pDocView.isSwipeVertical(), pDocView.getSpacingPx(), pDocView.isAutoSpacingEnabled(),
+						pDocView.isSwipeVertical(), pDocView.getSpacingPx(), pDocView.isAutoSpacingEnabled(),
                         pDocView.isFitEachPage());
                 return null;
             } else {

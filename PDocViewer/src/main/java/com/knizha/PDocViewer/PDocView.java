@@ -37,7 +37,6 @@ import android.util.Log;
 import android.widget.RelativeLayout;
 
 import com.knizha.PDocViewer.exception.PageRenderingException;
-import com.knizha.PDocViewer.link.DefaultLinkHandler;
 import com.knizha.PDocViewer.link.LinkHandler;
 import com.knizha.PDocViewer.listener.Callbacks;
 import com.knizha.PDocViewer.listener.OnDrawListener;
@@ -88,7 +87,7 @@ import java.util.List;
  * - DocumentPage = A page of the PDF document.
  * - UserPage = A page as defined by the user.
  * By default, they're the same. But the user can change the pages order
- * using {@link #load(DocumentSource, String, int[])}. In this
+ * using {@link #load(DocumentSource, String)}. In this
  * particular case, a userPage of 5 can refer to a documentPage of 17.
  */
 public class PDocView extends RelativeLayout {
@@ -109,7 +108,9 @@ public class PDocView extends RelativeLayout {
      * NONE - not scrolling
      */
     enum ScrollDir {
-        NONE, START, END
+        NONE,
+		START,
+		END
     }
 
     private ScrollDir scrollDir = ScrollDir.NONE;
@@ -185,7 +186,7 @@ public class PDocView extends RelativeLayout {
 
     private boolean nightMode = false;
 
-    private boolean pageSnap = true;
+    private boolean pageSnap = false;
 
     /** Pdfium core for loading and rendering PDFs */
     private PdfiumCore pdfiumCore;
@@ -198,28 +199,15 @@ public class PDocView extends RelativeLayout {
         return scrollHandle;
     }
 
-    /**
-     * True if bitmap should use ARGB_8888 format and take more memory
-     * False if bitmap should be compressed by using RGB_565 format and take less memory
-     */
-    private boolean bestQuality = false;
-
-    /**
-     * True if annotations should be rendered
-     * False otherwise
-     */
-    private boolean annotationRendering = false;
-
-    /**
-     * True if the view should render during scaling<br/>
-     * Can not be forced on older API versions (< Build.VERSION_CODES.KITKAT) as the GestureDetector does
-     * not detect scrolling while scaling.<br/>
-     * False otherwise
-     */
-    private boolean renderDuringScale = false;
+    /** ARGB_8888 or RGB_565 */
+    public boolean bestQuality = false;
+	
+	public boolean annotationRendering = false;
+	
+	public boolean renderDuringScale = false;
 
     /** Antialiasing and bitmap filtering */
-    private boolean enableAntialiasing = true;
+	public boolean enableAntialiasing = true;
     private PaintFlagsDrawFilter antialiasFilter =
             new PaintFlagsDrawFilter(0, Paint.ANTI_ALIAS_FLAG | Paint.FILTER_BITMAP_FLAG);
 
@@ -229,8 +217,8 @@ public class PDocView extends RelativeLayout {
     /** Add dynamic spacing to fit each page separately on the screen. */
     private boolean autoSpacing = false;
 
-    /** Fling a single page at a time */
-    private boolean pageFling = true;
+    /** Fling a single page at a time */ // 大傻逼
+    private boolean pageFling = false;
 
     /** Pages numbers used when calling onDrawAllListener */
     private List<Integer> onDrawPagesNums = new ArrayList<>(10);
@@ -239,7 +227,7 @@ public class PDocView extends RelativeLayout {
     private boolean hasSize = false;
 
     /** Holds last used Configurator that should be loaded when view has size */
-    private Configurator waitingDocumentConfigurator;
+    private Builder waitingDocumentConfigurator;
 
     /** Construct the initial view */
     public PDocView(Context context, AttributeSet set) {
@@ -265,18 +253,12 @@ public class PDocView extends RelativeLayout {
     }
 
     private void load(DocumentSource docSource, String password) {
-        load(docSource, password, null);
-    }
-
-    private void load(DocumentSource docSource, String password, int[] userPages) {
-
         if (!recycled) {
             throw new IllegalStateException("Don't call load on a PDF View without recycling it first.");
         }
-
         recycled = false;
         // Start decoding document
-        decodingAsyncTask = new DecodingAsyncTask(docSource, password, userPages, this, pdfiumCore);
+        decodingAsyncTask = new DecodingAsyncTask(docSource, password, this, pdfiumCore);
         decodingAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
@@ -1171,14 +1153,6 @@ public class PDocView extends RelativeLayout {
         this.maxZoom = maxZoom;
     }
 
-    public void useBestQuality(boolean bestQuality) {
-        this.bestQuality = bestQuality;
-    }
-
-    public boolean isBestQuality() {
-        return bestQuality;
-    }
-
     public boolean isSwipeVertical() {
         return swipeVertical;
     }
@@ -1190,21 +1164,9 @@ public class PDocView extends RelativeLayout {
     private void setSwipeVertical(boolean swipeVertical) {
         this.swipeVertical = swipeVertical;
     }
-
-    public void enableAnnotationRendering(boolean annotationRendering) {
-        this.annotationRendering = annotationRendering;
-    }
-
-    public boolean isAnnotationRendering() {
-        return annotationRendering;
-    }
-
+    
     public void enableRenderDuringScale(boolean renderDuringScale) {
         this.renderDuringScale = renderDuringScale;
-    }
-
-    public boolean isAntialiasing() {
-        return enableAntialiasing;
     }
 
     public void enableAntialiasing(boolean enableAntialiasing) {
@@ -1288,276 +1250,161 @@ public class PDocView extends RelativeLayout {
     }
 
     /** Use an asset file as the pdf source */
-    public Configurator fromAsset(String assetName) {
-        return new Configurator(new AssetSource(assetName));
+    public Builder fromAsset(String assetName) {
+        return new Builder(this, new AssetSource(assetName));
     }
 
     /** Use a file as the pdf source */
-    public Configurator fromFile(File file) {
-        return new Configurator(new FileSource(file));
+    public Builder fromFile(File file) {
+        return new Builder(this, new FileSource(file));
     }
 
     /** Use URI as the pdf source, for use with content providers */
-    public Configurator fromUri(Uri uri) {
-        return new Configurator(new UriSource(uri));
+    public Builder fromUri(Uri uri) {
+        return new Builder(this, new UriSource(uri));
     }
 
     /** Use bytearray as the pdf source, documents is not saved */
-    public Configurator fromBytes(byte[] bytes) {
-        return new Configurator(new ByteArraySource(bytes));
+    public Builder fromBytes(byte[] bytes) {
+        return new Builder(this, new ByteArraySource(bytes));
     }
 
     /** Use stream as the pdf source. Stream will be written to bytearray, because native code does not support Java Streams */
-    public Configurator fromStream(InputStream stream) {
-        return new Configurator(new InputStreamSource(stream));
+    public Builder fromStream(InputStream stream) {
+        return new Builder(this, new InputStreamSource(stream));
     }
 
     /** Use custom source as pdf source */
-    public Configurator fromSource(DocumentSource docSource) {
-        return new Configurator(docSource);
+    public Builder fromSource(DocumentSource docSource) {
+        return new Builder(this, docSource);
     }
 
     private enum State {DEFAULT, LOADED, SHOWN, ERROR}
 
-    public class Configurator {
-
+    public class Builder {
+		final PDocView pThis;
         private final DocumentSource documentSource;
-
-        private int[] pageNumbers = null;
-
-        private boolean enableSwipe = true;
-
-        private boolean enableDoubletap = true;
-
-        private OnDrawListener onDrawListener;
-
-        private OnDrawListener onDrawAllListener;
-
-        private OnLoadCompleteListener onLoadCompleteListener;
-
-        private OnErrorListener onErrorListener;
-
-        private OnPageChangeListener onPageChangeListener;
-
-        private OnPageScrollListener onPageScrollListener;
-
-        private OnRenderListener onRenderListener;
-
-        private OnTapListener onTapListener;
-
-        private OnLongPressListener onLongPressListener;
-
-        private OnPageErrorListener onPageErrorListener;
-
-        private LinkHandler linkHandler = new DefaultLinkHandler(PDocView.this);
-
-        private int defaultPage = 0;
-
-        private boolean swipeHorizontal = false;
-
-        private boolean annotationRendering = false;
-
         private String password = null;
-
-        private ScrollHandle scrollHandle = null;
-
-        private boolean antialiasing = true;
-
-        private int spacing = 0;
-
-        private boolean autoSpacing = false;
-
-        private FitPolicy pageFitPolicy = FitPolicy.WIDTH;
-
-        private boolean fitEachPage = false;
-
-        private boolean pageFling = false;
-
-        private boolean pageSnap = false;
-
-        private boolean nightMode = false;
-
-        private Configurator(DocumentSource documentSource) {
-            this.documentSource = documentSource;
+        private Builder(PDocView pThis, DocumentSource documentSource) {
+			this.pThis = pThis;
+			this.documentSource = documentSource;
+			pThis.recycle();
+			CMN.Log("build", pThis.isPageSnap());
         }
-
-        public Configurator pages(int... pageNumbers) {
-            this.pageNumbers = pageNumbers;
+        public Builder enableSwipe(boolean enableSwipe) {
+			pThis.setSwipeEnabled(enableSwipe);
             return this;
         }
-
-        public Configurator enableSwipe(boolean enableSwipe) {
-            this.enableSwipe = enableSwipe;
+        public Builder enableDoubletap(boolean enableDoubletap) {
+			pThis.enableDoubletap(enableDoubletap);
             return this;
         }
-
-        public Configurator enableDoubletap(boolean enableDoubletap) {
-            this.enableDoubletap = enableDoubletap;
+        public Builder enableAnnotationRendering(boolean annotationRendering) {
+			pThis.annotationRendering = annotationRendering;
             return this;
         }
-
-        public Configurator enableAnnotationRendering(boolean annotationRendering) {
-            this.annotationRendering = annotationRendering;
+        public Builder onDraw(OnDrawListener onDrawListener) {
+			pThis.callbacks.setOnDraw(onDrawListener);
             return this;
         }
-
-        public Configurator onDraw(OnDrawListener onDrawListener) {
-            this.onDrawListener = onDrawListener;
+        public Builder onDrawAll(OnDrawListener onDrawAllListener) {
+			pThis.callbacks.setOnDrawAll(onDrawAllListener);
             return this;
         }
-
-        public Configurator onDrawAll(OnDrawListener onDrawAllListener) {
-            this.onDrawAllListener = onDrawAllListener;
+        public Builder onLoad(OnLoadCompleteListener onLoadCompleteListener) {
+			pThis.callbacks.setOnLoadComplete(onLoadCompleteListener);
             return this;
         }
-
-        public Configurator onLoad(OnLoadCompleteListener onLoadCompleteListener) {
-            this.onLoadCompleteListener = onLoadCompleteListener;
+        public Builder onPageScroll(OnPageScrollListener onPageScrollListener) {
+			pThis.callbacks.setOnPageScroll(onPageScrollListener);
             return this;
         }
-
-        public Configurator onPageScroll(OnPageScrollListener onPageScrollListener) {
-            this.onPageScrollListener = onPageScrollListener;
+        public Builder onError(OnErrorListener onErrorListener) {
+			pThis.callbacks.setOnError(onErrorListener);
             return this;
         }
-
-        public Configurator onError(OnErrorListener onErrorListener) {
-            this.onErrorListener = onErrorListener;
+        public Builder onPageError(OnPageErrorListener onPageErrorListener) {
+			pThis.callbacks.setOnPageError(onPageErrorListener);
             return this;
         }
-
-        public Configurator onPageError(OnPageErrorListener onPageErrorListener) {
-            this.onPageErrorListener = onPageErrorListener;
+        public Builder onPageChange(OnPageChangeListener onPageChangeListener) {
+			pThis.callbacks.setOnPageChange(onPageChangeListener);
             return this;
         }
-
-        public Configurator onPageChange(OnPageChangeListener onPageChangeListener) {
-            this.onPageChangeListener = onPageChangeListener;
+        public Builder onRender(OnRenderListener onRenderListener) {
+			pThis.callbacks.setOnRender(onRenderListener);
             return this;
         }
-
-        public Configurator onRender(OnRenderListener onRenderListener) {
-            this.onRenderListener = onRenderListener;
+        public Builder onTap(OnTapListener onTapListener) {
+			pThis.callbacks.setOnTap(onTapListener);
             return this;
         }
-
-        public Configurator onTap(OnTapListener onTapListener) {
-            this.onTapListener = onTapListener;
+        public Builder onLongPress(OnLongPressListener onLongPressListener) {
+			pThis.callbacks.setOnLongPress(onLongPressListener);
             return this;
         }
-
-        public Configurator onLongPress(OnLongPressListener onLongPressListener) {
-            this.onLongPressListener = onLongPressListener;
+        public Builder linkHandler(LinkHandler linkHandler) {
+			pThis.callbacks.setLinkHandler(linkHandler);
             return this;
         }
-
-        public Configurator linkHandler(LinkHandler linkHandler) {
-            this.linkHandler = linkHandler;
+        public Builder defaultPage(int defaultPage) {
+			pThis.setDefaultPage(defaultPage);
             return this;
         }
-
-        public Configurator defaultPage(int defaultPage) {
-            this.defaultPage = defaultPage;
+        public Builder swipeHorizontal(boolean swipeHorizontal) {
+			pThis.setSwipeVertical(!swipeHorizontal);
             return this;
         }
-
-        public Configurator swipeHorizontal(boolean swipeHorizontal) {
-            this.swipeHorizontal = swipeHorizontal;
-            return this;
-        }
-
-        public Configurator password(String password) {
+        public Builder password(String password) {
             this.password = password;
             return this;
         }
-
-        public Configurator scrollHandle(ScrollHandle scrollHandle) {
-            this.scrollHandle = scrollHandle;
+        public Builder scrollHandle(ScrollHandle scrollHandle) {
+			pThis.setScrollHandle(scrollHandle);
             return this;
         }
-
-        public Configurator enableAntialiasing(boolean antialiasing) {
-            this.antialiasing = antialiasing;
+        public Builder enableAntialiasing(boolean antialiasing) {
+			pThis.enableAntialiasing(antialiasing);
             return this;
         }
-
-        public Configurator spacing(int spacing) {
-            this.spacing = spacing;
+        public Builder spacing(int spacing) {
+			pThis.setSpacing(spacing);
             return this;
         }
-
-        public Configurator autoSpacing(boolean autoSpacing) {
-            this.autoSpacing = autoSpacing;
+        public Builder autoSpacing(boolean autoSpacing) {
+			pThis.setAutoSpacing(autoSpacing);
             return this;
         }
-
-        public Configurator pageFitPolicy(FitPolicy pageFitPolicy) {
-            this.pageFitPolicy = pageFitPolicy;
+        public Builder pageFitPolicy(FitPolicy pageFitPolicy) {
+			pThis.setPageFitPolicy(pageFitPolicy);
             return this;
         }
-
-        public Configurator fitEachPage(boolean fitEachPage) {
-            this.fitEachPage = fitEachPage;
+        public Builder fitEachPage(boolean fitEachPage) {
+			pThis.setFitEachPage(fitEachPage);
+			return this;
+        }
+        public Builder pageSnap(boolean pageSnap) {
+			pThis.setPageSnap(pageSnap);
             return this;
         }
-
-        public Configurator pageSnap(boolean pageSnap) {
-            this.pageSnap = pageSnap;
+        public Builder pageFling(boolean pageFling) {
+			pThis.setPageFling(pageFling);
             return this;
         }
-
-        public Configurator pageFling(boolean pageFling) {
-            this.pageFling = pageFling;
+        public Builder nightMode(boolean nightMode) {
+			pThis.setNightMode(nightMode);
             return this;
         }
-
-        public Configurator nightMode(boolean nightMode) {
-            this.nightMode = nightMode;
+        public Builder disableLongpress() {
+            pThis.dragPinchManager.disableLongpress();
             return this;
         }
-
-        public Configurator disableLongpress() {
-            PDocView.this.dragPinchManager.disableLongpress();
-            return this;
-        }
-
         public void load() {
             if (!hasSize) {
                 waitingDocumentConfigurator = this;
                 return;
             }
-            PDocView.this.recycle();
-            PDocView.this.callbacks.setOnLoadComplete(onLoadCompleteListener);
-            PDocView.this.callbacks.setOnError(onErrorListener);
-            PDocView.this.callbacks.setOnDraw(onDrawListener);
-            PDocView.this.callbacks.setOnDrawAll(onDrawAllListener);
-            PDocView.this.callbacks.setOnPageChange(onPageChangeListener);
-            PDocView.this.callbacks.setOnPageScroll(onPageScrollListener);
-            PDocView.this.callbacks.setOnRender(onRenderListener);
-            PDocView.this.callbacks.setOnTap(onTapListener);
-            PDocView.this.callbacks.setOnLongPress(onLongPressListener);
-            PDocView.this.callbacks.setOnPageError(onPageErrorListener);
-            PDocView.this.callbacks.setLinkHandler(linkHandler);
-            PDocView.this.setSwipeEnabled(enableSwipe);
-            PDocView.this.setNightMode(nightMode);
-            PDocView.this.enableDoubletap(enableDoubletap);
-            PDocView.this.setDefaultPage(defaultPage);
-            PDocView.this.setSwipeVertical(!swipeHorizontal);
-            PDocView.this.enableAnnotationRendering(annotationRendering);
-            PDocView.this.setScrollHandle(scrollHandle);
-            PDocView.this.enableAntialiasing(antialiasing);
-            PDocView.this.setSpacing(spacing);
-            PDocView.this.setAutoSpacing(autoSpacing);
-            PDocView.this.setPageFitPolicy(pageFitPolicy);
-            PDocView.this.setFitEachPage(fitEachPage);
-            PDocView.this.setPageSnap(pageSnap);
-            PDocView.this.setPageFling(pageFling);
-
-            if (pageNumbers != null) {
-                PDocView.this.load(documentSource, password, pageNumbers);
-            } else {
-                PDocView.this.load(documentSource, password);
-            }
+			pThis.load(documentSource, password);
         }
     }
 }

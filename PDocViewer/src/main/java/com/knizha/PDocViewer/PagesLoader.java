@@ -286,8 +286,8 @@ class PagesLoader {
         if (renderWidth > 0 && renderHeight > 0) {
             if (!pDocView.cacheManager.upPartIfContained(page, pageRelativeBounds, cacheOrder)) {
                 pDocView.renderingHandler.addRenderingTask(page, renderWidth, renderHeight,
-                        pageRelativeBounds, false, cacheOrder, pDocView.isBestQuality(),
-                        pDocView.isAnnotationRendering());
+                        pageRelativeBounds, false, cacheOrder, pDocView.bestQuality,
+                        pDocView.annotationRendering);
             }
 
             cacheOrder++;
@@ -303,7 +303,7 @@ class PagesLoader {
         if (!pDocView.cacheManager.containsThumbnail(page, thumbnailRect)) {
             pDocView.renderingHandler.addRenderingTask(page,
                     thumbnailWidth, thumbnailHeight, thumbnailRect,
-                    true, 0, pDocView.isBestQuality(), pDocView.isAnnotationRendering());
+                    true, 0, pDocView.bestQuality, pDocView.annotationRendering);
         }
     }
 
