@@ -1,3 +1,2 @@
-include ':android-pdf-viewer'
-include ':sample'
 include ':LibPdfium'
+include ':PDocViewer'
