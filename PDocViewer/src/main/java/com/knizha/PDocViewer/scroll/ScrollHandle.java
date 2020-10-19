@@ -1,6 +1,6 @@
 package com.knizha.PDocViewer.scroll;
 
-import com.knizha.PDocViewer.PDFView;
+import com.knizha.PDocViewer.PDocView;
 
 public interface ScrollHandle {
 
@@ -16,9 +16,9 @@ public interface ScrollHandle {
      * Do not call this method manually.
      * For usage sample see {@link DefaultScrollHandle}
      *
-     * @param pdfView PDFView instance
+     * @param pDocView PDFView instance
      */
-    void setupLayout(PDFView pdfView);
+    void setupLayout(PDocView pDocView);
 
     /**
      * Method called by PDFView when handle should be removed from layout

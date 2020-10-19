@@ -28,7 +28,7 @@ class DecodingAsyncTask extends AsyncTask<Void, Void, Throwable> {
 
     private boolean cancelled;
 
-    private WeakReference<PDFView> pdfViewReference;
+    private WeakReference<PDocView> pdfViewReference;
 
     private PdfiumCore pdfiumCore;
     private String password;
@@ -36,11 +36,11 @@ class DecodingAsyncTask extends AsyncTask<Void, Void, Throwable> {
     private int[] userPages;
     private PdfFile pdfFile;
 
-    DecodingAsyncTask(DocumentSource docSource, String password, int[] userPages, PDFView pdfView, PdfiumCore pdfiumCore) {
+    DecodingAsyncTask(DocumentSource docSource, String password, int[] userPages, PDocView pDocView, PdfiumCore pdfiumCore) {
         this.docSource = docSource;
         this.userPages = userPages;
         this.cancelled = false;
-        this.pdfViewReference = new WeakReference<>(pdfView);
+        this.pdfViewReference = new WeakReference<>(pDocView);
         this.password = password;
         this.pdfiumCore = pdfiumCore;
     }
@@ -48,12 +48,12 @@ class DecodingAsyncTask extends AsyncTask<Void, Void, Throwable> {
     @Override
     protected Throwable doInBackground(Void... params) {
         try {
-            PDFView pdfView = pdfViewReference.get();
-            if (pdfView != null) {
-                PdfDocument pdfDocument = docSource.createDocument(pdfView.getContext(), pdfiumCore, password);
-                pdfFile = new PdfFile(pdfiumCore, pdfDocument, pdfView.getPageFitPolicy(), getViewSize(pdfView),
-                        userPages, pdfView.isSwipeVertical(), pdfView.getSpacingPx(), pdfView.isAutoSpacingEnabled(),
-                        pdfView.isFitEachPage());
+            PDocView pDocView = pdfViewReference.get();
+            if (pDocView != null) {
+                PdfDocument pdfDocument = docSource.createDocument(pDocView.getContext(), pdfiumCore, password);
+                pdfFile = new PdfFile(pdfiumCore, pdfDocument, pDocView.getPageFitPolicy(), getViewSize(pDocView),
+                        userPages, pDocView.isSwipeVertical(), pDocView.getSpacingPx(), pDocView.isAutoSpacingEnabled(),
+                        pDocView.isFitEachPage());
                 return null;
             } else {
                 return new NullPointerException("pdfView == null");
@@ -64,20 +64,20 @@ class DecodingAsyncTask extends AsyncTask<Void, Void, Throwable> {
         }
     }
 
-    private Size getViewSize(PDFView pdfView) {
-        return new Size(pdfView.getWidth(), pdfView.getHeight());
+    private Size getViewSize(PDocView pDocView) {
+        return new Size(pDocView.getWidth(), pDocView.getHeight());
     }
 
     @Override
     protected void onPostExecute(Throwable t) {
-        PDFView pdfView = pdfViewReference.get();
-        if (pdfView != null) {
+        PDocView pDocView = pdfViewReference.get();
+        if (pDocView != null) {
             if (t != null) {
-                pdfView.loadError(t);
+                pDocView.loadError(t);
                 return;
             }
             if (!cancelled) {
-                pdfView.loadComplete(pdfFile);
+                pDocView.loadComplete(pdfFile);
             }
         }
     }

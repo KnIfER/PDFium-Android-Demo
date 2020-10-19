@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.knizha.PDocViewer.PDFView;
+import com.knizha.PDocViewer.PDocView;
 import com.knziha.PDocViewer.R;
 import com.knizha.PDocViewer.util.Util;
 
@@ -26,7 +26,7 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
     protected TextView textView;
     protected Context context;
     private boolean inverted;
-    private PDFView pdfView;
+    private PDocView pDocView;
     private float currentPos;
 
     private Handler handler = new Handler();
@@ -52,11 +52,11 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
     }
 
     @Override
-    public void setupLayout(PDFView pdfView) {
+    public void setupLayout(PDocView pDocView) {
         int align, width, height;
         Drawable background;
         // determine handler position, default is right (when scrolling vertically) or bottom (when scrolling horizontally)
-        if (pdfView.isSwipeVertical()) {
+        if (pDocView.isSwipeVertical()) {
             width = HANDLE_LONG;
             height = HANDLE_SHORT;
             if (inverted) { // left
@@ -93,14 +93,14 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
         addView(textView, tvlp);
 
         lp.addRule(align);
-        pdfView.addView(this, lp);
+        pDocView.addView(this, lp);
 
-        this.pdfView = pdfView;
+        this.pDocView = pDocView;
     }
 
     @Override
     public void destroyLayout() {
-        pdfView.removeView(this);
+        pDocView.removeView(this);
     }
 
     @Override
@@ -110,8 +110,8 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
         } else {
             handler.removeCallbacks(hidePageScrollerRunnable);
         }
-        if (pdfView != null) {
-            setPosition((pdfView.isSwipeVertical() ? pdfView.getHeight() : pdfView.getWidth()) * position);
+        if (pDocView != null) {
+            setPosition((pDocView.isSwipeVertical() ? pDocView.getHeight() : pDocView.getWidth()) * position);
         }
     }
 
@@ -120,10 +120,10 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
             return;
         }
         float pdfViewSize;
-        if (pdfView.isSwipeVertical()) {
-            pdfViewSize = pdfView.getHeight();
+        if (pDocView.isSwipeVertical()) {
+            pdfViewSize = pDocView.getHeight();
         } else {
-            pdfViewSize = pdfView.getWidth();
+            pdfViewSize = pDocView.getWidth();
         }
         pos -= relativeHandlerMiddle;
 
@@ -133,7 +133,7 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
             pos = pdfViewSize - Util.getDP(context, HANDLE_SHORT);
         }
 
-        if (pdfView.isSwipeVertical()) {
+        if (pDocView.isSwipeVertical()) {
             setY(pos);
         } else {
             setX(pos);
@@ -145,14 +145,14 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
 
     private void calculateMiddle() {
         float pos, viewSize, pdfViewSize;
-        if (pdfView.isSwipeVertical()) {
+        if (pDocView.isSwipeVertical()) {
             pos = getY();
             viewSize = getHeight();
-            pdfViewSize = pdfView.getHeight();
+            pdfViewSize = pDocView.getHeight();
         } else {
             pos = getX();
             viewSize = getWidth();
-            pdfViewSize = pdfView.getWidth();
+            pdfViewSize = pDocView.getWidth();
         }
         relativeHandlerMiddle = ((pos + relativeHandlerMiddle) / pdfViewSize) * viewSize;
     }
@@ -197,7 +197,7 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
     }
 
     private boolean isPDFViewReady() {
-        return pdfView != null && pdfView.getPageCount() > 0 && !pdfView.documentFitsView();
+        return pDocView != null && pDocView.getPageCount() > 0 && !pDocView.documentFitsView();
     }
 
     @Override
@@ -210,27 +210,27 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_POINTER_DOWN:
-                pdfView.stopFling();
+                pDocView.stopFling();
                 handler.removeCallbacks(hidePageScrollerRunnable);
-                if (pdfView.isSwipeVertical()) {
+                if (pDocView.isSwipeVertical()) {
                     currentPos = event.getRawY() - getY();
                 } else {
                     currentPos = event.getRawX() - getX();
                 }
             case MotionEvent.ACTION_MOVE:
-                if (pdfView.isSwipeVertical()) {
+                if (pDocView.isSwipeVertical()) {
                     setPosition(event.getRawY() - currentPos + relativeHandlerMiddle);
-                    pdfView.setPositionOffset(relativeHandlerMiddle / (float) getHeight(), false);
+                    pDocView.setPositionOffset(relativeHandlerMiddle / (float) getHeight(), false);
                 } else {
                     setPosition(event.getRawX() - currentPos + relativeHandlerMiddle);
-                    pdfView.setPositionOffset(relativeHandlerMiddle / (float) getWidth(), false);
+                    pDocView.setPositionOffset(relativeHandlerMiddle / (float) getWidth(), false);
                 }
                 return true;
             case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_POINTER_UP:
                 hideDelayed();
-                pdfView.performPageSnap();
+                pDocView.performPageSnap();
                 return true;
         }
 

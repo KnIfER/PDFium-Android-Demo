@@ -29,7 +29,7 @@ import com.knizha.PDocViewer.model.PagePart;
 
 /**
  * A {@link Handler} that will process incoming {@link RenderingTask} messages
- * and alert {@link PDFView#onBitmapRendered(PagePart)} when the portion of the
+ * and alert {@link PDocView#onBitmapRendered(PagePart)} when the portion of the
  * PDF is ready to render.
  */
 class RenderingHandler extends Handler {
@@ -40,16 +40,16 @@ class RenderingHandler extends Handler {
 
     private static final String TAG = RenderingHandler.class.getName();
 
-    private PDFView pdfView;
+    private PDocView pDocView;
 
     private RectF renderBounds = new RectF();
     private Rect roundedRenderBounds = new Rect();
     private Matrix renderMatrix = new Matrix();
     private boolean running = false;
 
-    RenderingHandler(Looper looper, PDFView pdfView) {
+    RenderingHandler(Looper looper, PDocView pDocView) {
         super(looper);
-        this.pdfView = pdfView;
+        this.pDocView = pDocView;
     }
 
     void addRenderingTask(int page, float width, float height, RectF bounds, boolean thumbnail, int cacheOrder, boolean bestQuality, boolean annotationRendering) {
@@ -65,10 +65,10 @@ class RenderingHandler extends Handler {
             final PagePart part = proceed(task);
             if (part != null) {
                 if (running) {
-                    pdfView.post(new Runnable() {
+                    pDocView.post(new Runnable() {
                         @Override
                         public void run() {
-                            pdfView.onBitmapRendered(part);
+                            pDocView.onBitmapRendered(part);
                         }
                     });
                 } else {
@@ -76,17 +76,17 @@ class RenderingHandler extends Handler {
                 }
             }
         } catch (final PageRenderingException ex) {
-            pdfView.post(new Runnable() {
+            pDocView.post(new Runnable() {
                 @Override
                 public void run() {
-                    pdfView.onPageError(ex);
+                    pDocView.onPageError(ex);
                 }
             });
         }
     }
 
     private PagePart proceed(RenderingTask renderingTask) throws PageRenderingException {
-        PdfFile pdfFile = pdfView.pdfFile;
+        PdfFile pdfFile = pDocView.pdfFile;
         pdfFile.openPage(renderingTask.page);
 
         int w = Math.round(renderingTask.width);

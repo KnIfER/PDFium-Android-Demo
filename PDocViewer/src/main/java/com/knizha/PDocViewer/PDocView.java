@@ -91,9 +91,9 @@ import java.util.List;
  * using {@link #load(DocumentSource, String, int[])}. In this
  * particular case, a userPage of 5 can refer to a documentPage of 17.
  */
-public class PDFView extends RelativeLayout {
+public class PDocView extends RelativeLayout {
 
-    private static final String TAG = PDFView.class.getSimpleName();
+    private static final String TAG = PDocView.class.getSimpleName();
 
     public static final float DEFAULT_MAX_SCALE = 3.0f;
     public static final float DEFAULT_MID_SCALE = 1.75f;
@@ -242,7 +242,7 @@ public class PDFView extends RelativeLayout {
     private Configurator waitingDocumentConfigurator;
 
     /** Construct the initial view */
-    public PDFView(Context context, AttributeSet set) {
+    public PDocView(Context context, AttributeSet set) {
         super(context, set);
 
         renderingHandlerThread = new HandlerThread("PDF renderer");
@@ -350,7 +350,7 @@ public class PDFView extends RelativeLayout {
     /**
      * @param progress   must be between 0 and 1
      * @param moveHandle whether to move scroll handle
-     * @see PDFView#getPositionOffset()
+     * @see PDocView#getPositionOffset()
      */
     public void setPositionOffset(float progress, boolean moveHandle) {
         if (swipeVertical) {
@@ -1349,7 +1349,7 @@ public class PDFView extends RelativeLayout {
 
         private OnPageErrorListener onPageErrorListener;
 
-        private LinkHandler linkHandler = new DefaultLinkHandler(PDFView.this);
+        private LinkHandler linkHandler = new DefaultLinkHandler(PDocView.this);
 
         private int defaultPage = 0;
 
@@ -1517,7 +1517,7 @@ public class PDFView extends RelativeLayout {
         }
 
         public Configurator disableLongpress() {
-            PDFView.this.dragPinchManager.disableLongpress();
+            PDocView.this.dragPinchManager.disableLongpress();
             return this;
         }
 
@@ -1526,37 +1526,37 @@ public class PDFView extends RelativeLayout {
                 waitingDocumentConfigurator = this;
                 return;
             }
-            PDFView.this.recycle();
-            PDFView.this.callbacks.setOnLoadComplete(onLoadCompleteListener);
-            PDFView.this.callbacks.setOnError(onErrorListener);
-            PDFView.this.callbacks.setOnDraw(onDrawListener);
-            PDFView.this.callbacks.setOnDrawAll(onDrawAllListener);
-            PDFView.this.callbacks.setOnPageChange(onPageChangeListener);
-            PDFView.this.callbacks.setOnPageScroll(onPageScrollListener);
-            PDFView.this.callbacks.setOnRender(onRenderListener);
-            PDFView.this.callbacks.setOnTap(onTapListener);
-            PDFView.this.callbacks.setOnLongPress(onLongPressListener);
-            PDFView.this.callbacks.setOnPageError(onPageErrorListener);
-            PDFView.this.callbacks.setLinkHandler(linkHandler);
-            PDFView.this.setSwipeEnabled(enableSwipe);
-            PDFView.this.setNightMode(nightMode);
-            PDFView.this.enableDoubletap(enableDoubletap);
-            PDFView.this.setDefaultPage(defaultPage);
-            PDFView.this.setSwipeVertical(!swipeHorizontal);
-            PDFView.this.enableAnnotationRendering(annotationRendering);
-            PDFView.this.setScrollHandle(scrollHandle);
-            PDFView.this.enableAntialiasing(antialiasing);
-            PDFView.this.setSpacing(spacing);
-            PDFView.this.setAutoSpacing(autoSpacing);
-            PDFView.this.setPageFitPolicy(pageFitPolicy);
-            PDFView.this.setFitEachPage(fitEachPage);
-            PDFView.this.setPageSnap(pageSnap);
-            PDFView.this.setPageFling(pageFling);
+            PDocView.this.recycle();
+            PDocView.this.callbacks.setOnLoadComplete(onLoadCompleteListener);
+            PDocView.this.callbacks.setOnError(onErrorListener);
+            PDocView.this.callbacks.setOnDraw(onDrawListener);
+            PDocView.this.callbacks.setOnDrawAll(onDrawAllListener);
+            PDocView.this.callbacks.setOnPageChange(onPageChangeListener);
+            PDocView.this.callbacks.setOnPageScroll(onPageScrollListener);
+            PDocView.this.callbacks.setOnRender(onRenderListener);
+            PDocView.this.callbacks.setOnTap(onTapListener);
+            PDocView.this.callbacks.setOnLongPress(onLongPressListener);
+            PDocView.this.callbacks.setOnPageError(onPageErrorListener);
+            PDocView.this.callbacks.setLinkHandler(linkHandler);
+            PDocView.this.setSwipeEnabled(enableSwipe);
+            PDocView.this.setNightMode(nightMode);
+            PDocView.this.enableDoubletap(enableDoubletap);
+            PDocView.this.setDefaultPage(defaultPage);
+            PDocView.this.setSwipeVertical(!swipeHorizontal);
+            PDocView.this.enableAnnotationRendering(annotationRendering);
+            PDocView.this.setScrollHandle(scrollHandle);
+            PDocView.this.enableAntialiasing(antialiasing);
+            PDocView.this.setSpacing(spacing);
+            PDocView.this.setAutoSpacing(autoSpacing);
+            PDocView.this.setPageFitPolicy(pageFitPolicy);
+            PDocView.this.setFitEachPage(fitEachPage);
+            PDocView.this.setPageSnap(pageSnap);
+            PDocView.this.setPageFling(pageFling);
 
             if (pageNumbers != null) {
-                PDFView.this.load(documentSource, password, pageNumbers);
+                PDocView.this.load(documentSource, password, pageNumbers);
             } else {
-                PDFView.this.load(documentSource, password);
+                PDocView.this.load(documentSource, password);
             }
         }
     }

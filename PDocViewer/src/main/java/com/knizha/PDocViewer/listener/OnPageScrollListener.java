@@ -15,7 +15,7 @@
  */
 package com.knizha.PDocViewer.listener;
 
-import com.knizha.PDocViewer.PDFView;
+import com.knizha.PDocViewer.PDocView;
 
 /**
  * Implements this interface to receive events from PDFView
@@ -27,7 +27,7 @@ public interface OnPageScrollListener {
      * Called on every move while scrolling
      *
      * @param page current page index
-     * @param positionOffset see {@link PDFView#getPositionOffset()}
+     * @param positionOffset see {@link PDocView#getPositionOffset()}
      */
     void onPageScrolled(int page, float positionOffset);
 }

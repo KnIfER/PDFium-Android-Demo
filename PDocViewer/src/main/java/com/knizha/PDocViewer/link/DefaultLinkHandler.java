@@ -20,17 +20,17 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 
-import com.knizha.PDocViewer.PDFView;
+import com.knizha.PDocViewer.PDocView;
 import com.knizha.PDocViewer.model.LinkTapEvent;
 
 public class DefaultLinkHandler implements LinkHandler {
 
     private static final String TAG = DefaultLinkHandler.class.getSimpleName();
 
-    private PDFView pdfView;
+    private PDocView pDocView;
 
-    public DefaultLinkHandler(PDFView pdfView) {
-        this.pdfView = pdfView;
+    public DefaultLinkHandler(PDocView pDocView) {
+        this.pDocView = pDocView;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class DefaultLinkHandler implements LinkHandler {
     private void handleUri(String uri) {
         Uri parsedUri = Uri.parse(uri);
         Intent intent = new Intent(Intent.ACTION_VIEW, parsedUri);
-        Context context = pdfView.getContext();
+        Context context = pDocView.getContext();
         if (intent.resolveActivity(context.getPackageManager()) != null) {
             context.startActivity(intent);
         } else {
@@ -56,6 +56,6 @@ public class DefaultLinkHandler implements LinkHandler {
     }
 
     private void handlePage(int page) {
-        pdfView.jumpTo(page);
+        pDocView.jumpTo(page);
     }
 }

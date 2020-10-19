@@ -59,8 +59,8 @@ public class PDocMainActivity extends AppCompatActivity implements OnPageChangeL
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		this.pdfView = findViewById(R.id.pdfView);
-		pdfView.setBackgroundColor(Color.LTGRAY);
+		this.pDocView = findViewById(R.id.pdfView);
+		pDocView.setBackgroundColor(Color.LTGRAY);
 		if (uri != null) {
 			displayFromUri(uri);
 		} else {
@@ -86,7 +86,7 @@ public class PDocMainActivity extends AppCompatActivity implements OnPageChangeL
 		return super.onOptionsItemSelected(item);
 	}
 	
-	PDFView pdfView;
+	PDocView pDocView;
     Uri uri;
     Integer pageNumber = 0;
     String pdfFileName;
@@ -119,7 +119,7 @@ public class PDocMainActivity extends AppCompatActivity implements OnPageChangeL
     private void displayFromAsset(String assetFileName) {
         pdfFileName = assetFileName;
 
-        pdfView.fromAsset(SAMPLE_FILE)
+        pDocView.fromAsset(SAMPLE_FILE)
                 .defaultPage(pageNumber)
                 .onPageChange(this)
                 .enableAnnotationRendering(true)
@@ -134,7 +134,7 @@ public class PDocMainActivity extends AppCompatActivity implements OnPageChangeL
     private void displayFromUri(Uri uri) {
         pdfFileName = getFileName(uri);
 
-        pdfView.fromUri(uri)
+        pDocView.fromUri(uri)
                 .defaultPage(pageNumber)
                 .onPageChange(this)
                 .enableAnnotationRendering(true)
@@ -182,7 +182,7 @@ public class PDocMainActivity extends AppCompatActivity implements OnPageChangeL
 
     @Override
     public void loadComplete(int nbPages) {
-        PdfDocument.Meta meta = pdfView.getDocumentMeta();
+        PdfDocument.Meta meta = pDocView.getDocumentMeta();
         Log.e(TAG, "title = " + meta.getTitle());
         Log.e(TAG, "author = " + meta.getAuthor());
         Log.e(TAG, "subject = " + meta.getSubject());
@@ -192,7 +192,7 @@ public class PDocMainActivity extends AppCompatActivity implements OnPageChangeL
         Log.e(TAG, "creationDate = " + meta.getCreationDate());
         Log.e(TAG, "modDate = " + meta.getModDate());
 
-        printBookmarksTree(pdfView.getTableOfContents(), "-");
+        printBookmarksTree(pDocView.getTableOfContents(), "-");
 
     }
 

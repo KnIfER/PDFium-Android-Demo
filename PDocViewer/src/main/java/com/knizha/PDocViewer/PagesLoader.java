@@ -30,7 +30,7 @@ import static com.knizha.PDocViewer.util.Constants.PRELOAD_OFFSET;
 
 class PagesLoader {
 
-    private PDFView pdfView;
+    private PDocView pDocView;
     private int cacheOrder;
     private float xOffset;
     private float yOffset;
@@ -91,17 +91,17 @@ class PagesLoader {
         }
     }
 
-    PagesLoader(PDFView pdfView) {
-        this.pdfView = pdfView;
-        this.preloadOffset = Util.getDP(pdfView.getContext(), PRELOAD_OFFSET);
+    PagesLoader(PDocView pDocView) {
+        this.pDocView = pDocView;
+        this.preloadOffset = Util.getDP(pDocView.getContext(), PRELOAD_OFFSET);
     }
 
     private void getPageColsRows(GridSize grid, int pageIndex) {
-        SizeF size = pdfView.pdfFile.getPageSize(pageIndex);
+        SizeF size = pDocView.pdfFile.getPageSize(pageIndex);
         float ratioX = 1f / size.getWidth();
         float ratioY = 1f / size.getHeight();
-        final float partHeight = (Constants.PART_SIZE * ratioY) / pdfView.getZoom();
-        final float partWidth = (Constants.PART_SIZE * ratioX) / pdfView.getZoom();
+        final float partHeight = (Constants.PART_SIZE * ratioY) / pDocView.getZoom();
+        final float partWidth = (Constants.PART_SIZE * ratioX) / pDocView.getZoom();
         grid.rows = MathUtils.ceil(1f / partHeight);
         grid.cols = MathUtils.ceil(1f / partWidth);
     }
@@ -125,11 +125,11 @@ class PagesLoader {
         float fixedLastXOffset = -MathUtils.max(lastXOffset, 0);
         float fixedLastYOffset = -MathUtils.max(lastYOffset, 0);
 
-        float offsetFirst = pdfView.isSwipeVertical() ? fixedFirstYOffset : fixedFirstXOffset;
-        float offsetLast = pdfView.isSwipeVertical() ? fixedLastYOffset : fixedLastXOffset;
+        float offsetFirst = pDocView.isSwipeVertical() ? fixedFirstYOffset : fixedFirstXOffset;
+        float offsetLast = pDocView.isSwipeVertical() ? fixedLastYOffset : fixedLastXOffset;
 
-        int firstPage = pdfView.pdfFile.getPageAtOffset(offsetFirst, pdfView.getZoom());
-        int lastPage = pdfView.pdfFile.getPageAtOffset(offsetLast, pdfView.getZoom());
+        int firstPage = pDocView.pdfFile.getPageAtOffset(offsetFirst, pDocView.getZoom());
+        int lastPage = pDocView.pdfFile.getPageAtOffset(offsetLast, pDocView.getZoom());
         int pageCount = lastPage - firstPage + 1;
 
         List<RenderRange> renderRanges = new LinkedList<>();
@@ -146,9 +146,9 @@ class PagesLoader {
                     pageLastXOffset = fixedLastXOffset;
                     pageLastYOffset = fixedLastYOffset;
                 } else {
-                    float pageOffset = pdfView.pdfFile.getPageOffset(page, pdfView.getZoom());
-                    SizeF pageSize = pdfView.pdfFile.getScaledPageSize(page, pdfView.getZoom());
-                    if (pdfView.isSwipeVertical()) {
+                    float pageOffset = pDocView.pdfFile.getPageOffset(page, pDocView.getZoom());
+                    SizeF pageSize = pDocView.pdfFile.getScaledPageSize(page, pDocView.getZoom());
+                    if (pDocView.isSwipeVertical()) {
                         pageLastXOffset = fixedLastXOffset;
                         pageLastYOffset = pageOffset + pageSize.getHeight();
                     } else {
@@ -157,9 +157,9 @@ class PagesLoader {
                     }
                 }
             } else if (page == lastPage) {
-                float pageOffset = pdfView.pdfFile.getPageOffset(page, pdfView.getZoom());
+                float pageOffset = pDocView.pdfFile.getPageOffset(page, pDocView.getZoom());
 
-                if (pdfView.isSwipeVertical()) {
+                if (pDocView.isSwipeVertical()) {
                     pageFirstXOffset = fixedFirstXOffset;
                     pageFirstYOffset = pageOffset;
                 } else {
@@ -171,9 +171,9 @@ class PagesLoader {
                 pageLastYOffset = fixedLastYOffset;
 
             } else {
-                float pageOffset = pdfView.pdfFile.getPageOffset(page, pdfView.getZoom());
-                SizeF pageSize = pdfView.pdfFile.getScaledPageSize(page, pdfView.getZoom());
-                if (pdfView.isSwipeVertical()) {
+                float pageOffset = pDocView.pdfFile.getPageOffset(page, pDocView.getZoom());
+                SizeF pageSize = pDocView.pdfFile.getScaledPageSize(page, pDocView.getZoom());
+                if (pDocView.isSwipeVertical()) {
                     pageFirstXOffset = fixedFirstXOffset;
                     pageFirstYOffset = pageOffset;
 
@@ -189,7 +189,7 @@ class PagesLoader {
             }
 
             getPageColsRows(range.gridSize, range.page); // get the page's grid size that rows and cols
-            SizeF scaledPageSize = pdfView.pdfFile.getScaledPageSize(range.page, pdfView.getZoom());
+            SizeF scaledPageSize = pDocView.pdfFile.getScaledPageSize(range.page, pDocView.getZoom());
             float rowHeight = scaledPageSize.getHeight() / range.gridSize.rows;
             float colWidth = scaledPageSize.getWidth() / range.gridSize.cols;
 
@@ -201,20 +201,20 @@ class PagesLoader {
             // |            |           |            |
             // |            |           |            |
             // ---------------------------------------
-            float secondaryOffset = pdfView.pdfFile.getSecondaryPageOffset(page, pdfView.getZoom());
+            float secondaryOffset = pDocView.pdfFile.getSecondaryPageOffset(page, pDocView.getZoom());
 
             // calculate the row,col of the point in the leftTop and rightBottom
-            if (pdfView.isSwipeVertical()) {
-                range.leftTop.row = MathUtils.floor(Math.abs(pageFirstYOffset - pdfView.pdfFile.getPageOffset(range.page, pdfView.getZoom())) / rowHeight);
+            if (pDocView.isSwipeVertical()) {
+                range.leftTop.row = MathUtils.floor(Math.abs(pageFirstYOffset - pDocView.pdfFile.getPageOffset(range.page, pDocView.getZoom())) / rowHeight);
                 range.leftTop.col = MathUtils.floor(MathUtils.min(pageFirstXOffset - secondaryOffset, 0) / colWidth);
 
-                range.rightBottom.row = MathUtils.ceil(Math.abs(pageLastYOffset - pdfView.pdfFile.getPageOffset(range.page, pdfView.getZoom())) / rowHeight);
+                range.rightBottom.row = MathUtils.ceil(Math.abs(pageLastYOffset - pDocView.pdfFile.getPageOffset(range.page, pDocView.getZoom())) / rowHeight);
                 range.rightBottom.col = MathUtils.floor(MathUtils.min(pageLastXOffset - secondaryOffset, 0) / colWidth);
             } else {
-                range.leftTop.col = MathUtils.floor(Math.abs(pageFirstXOffset - pdfView.pdfFile.getPageOffset(range.page, pdfView.getZoom())) / colWidth);
+                range.leftTop.col = MathUtils.floor(Math.abs(pageFirstXOffset - pDocView.pdfFile.getPageOffset(range.page, pDocView.getZoom())) / colWidth);
                 range.leftTop.row = MathUtils.floor(MathUtils.min(pageFirstYOffset - secondaryOffset, 0) / rowHeight);
 
-                range.rightBottom.col = MathUtils.floor(Math.abs(pageLastXOffset - pdfView.pdfFile.getPageOffset(range.page, pdfView.getZoom())) / colWidth);
+                range.rightBottom.col = MathUtils.floor(Math.abs(pageLastXOffset - pDocView.pdfFile.getPageOffset(range.page, pDocView.getZoom())) / colWidth);
                 range.rightBottom.row = MathUtils.floor(MathUtils.min(pageLastYOffset - secondaryOffset, 0) / rowHeight);
             }
 
@@ -228,9 +228,9 @@ class PagesLoader {
         int parts = 0;
         float scaledPreloadOffset = preloadOffset;
         float firstXOffset = -xOffset + scaledPreloadOffset;
-        float lastXOffset = -xOffset - pdfView.getWidth() - scaledPreloadOffset;
+        float lastXOffset = -xOffset - pDocView.getWidth() - scaledPreloadOffset;
         float firstYOffset = -yOffset + scaledPreloadOffset;
-        float lastYOffset = -yOffset - pdfView.getHeight() - scaledPreloadOffset;
+        float lastYOffset = -yOffset - pDocView.getHeight() - scaledPreloadOffset;
 
         List<RenderRange> rangeList = getRenderRangeList(firstXOffset, firstYOffset, lastXOffset, lastYOffset);
 
@@ -284,10 +284,10 @@ class PagesLoader {
         RectF pageRelativeBounds = new RectF(relX, relY, relX + relWidth, relY + relHeight);
 
         if (renderWidth > 0 && renderHeight > 0) {
-            if (!pdfView.cacheManager.upPartIfContained(page, pageRelativeBounds, cacheOrder)) {
-                pdfView.renderingHandler.addRenderingTask(page, renderWidth, renderHeight,
-                        pageRelativeBounds, false, cacheOrder, pdfView.isBestQuality(),
-                        pdfView.isAnnotationRendering());
+            if (!pDocView.cacheManager.upPartIfContained(page, pageRelativeBounds, cacheOrder)) {
+                pDocView.renderingHandler.addRenderingTask(page, renderWidth, renderHeight,
+                        pageRelativeBounds, false, cacheOrder, pDocView.isBestQuality(),
+                        pDocView.isAnnotationRendering());
             }
 
             cacheOrder++;
@@ -297,20 +297,20 @@ class PagesLoader {
     }
 
     private void loadThumbnail(int page) {
-        SizeF pageSize = pdfView.pdfFile.getPageSize(page);
+        SizeF pageSize = pDocView.pdfFile.getPageSize(page);
         float thumbnailWidth = pageSize.getWidth() * Constants.THUMBNAIL_RATIO;
         float thumbnailHeight = pageSize.getHeight() * Constants.THUMBNAIL_RATIO;
-        if (!pdfView.cacheManager.containsThumbnail(page, thumbnailRect)) {
-            pdfView.renderingHandler.addRenderingTask(page,
+        if (!pDocView.cacheManager.containsThumbnail(page, thumbnailRect)) {
+            pDocView.renderingHandler.addRenderingTask(page,
                     thumbnailWidth, thumbnailHeight, thumbnailRect,
-                    true, 0, pdfView.isBestQuality(), pdfView.isAnnotationRendering());
+                    true, 0, pDocView.isBestQuality(), pDocView.isAnnotationRendering());
         }
     }
 
     void loadPages() {
         cacheOrder = 1;
-        xOffset = -MathUtils.max(pdfView.getCurrentXOffset(), 0);
-        yOffset = -MathUtils.max(pdfView.getCurrentYOffset(), 0);
+        xOffset = -MathUtils.max(pDocView.getCurrentXOffset(), 0);
+        yOffset = -MathUtils.max(pDocView.getCurrentYOffset(), 0);
 
         loadVisible();
     }
