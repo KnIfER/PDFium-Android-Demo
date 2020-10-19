@@ -39,7 +39,7 @@ import com.knizha.PDocViewer.listener.OnPageChangeListener;
 import com.knizha.PDocViewer.listener.OnPageErrorListener;
 import com.knizha.PDocViewer.scroll.DefaultScrollHandle;
 import com.knizha.PDocViewer.util.FitPolicy;
-import com.knizha.barteksc.sample.R;
+import com.knziha.PDocViewer.R;
 import com.shockwave.pdfium.PdfDocument;
 
 import java.util.List;

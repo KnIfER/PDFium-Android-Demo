@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.knizha.PDocViewer.PDFView;
-import com.knizha.barteksc.pdfviewer.R;
+import com.knziha.PDocViewer.R;
 import com.knizha.PDocViewer.util.Util;
 
 public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle {
