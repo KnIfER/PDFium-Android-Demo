@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libjpeg">
+      <UniqueIdentifier>{0D5427EC-5CAB-2F1D-14DB-F1AC1071019E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libjpeg\cderror.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\cdjpeg.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClCompile Include="libjpeg\fpdfapi_jcapimin.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcapistd.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jccoefct.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jccolor.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcdctmgr.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jchuff.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcinit.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcmainct.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcmarker.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcmaster.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcomapi.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcparam.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcphuff.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcprepct.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jcsample.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jctrans.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdapimin.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdapistd.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdcoefct.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdcolor.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jddctmgr.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdhuff.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdinput.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdmainct.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdmarker.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdmaster.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdmerge.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdphuff.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdpostct.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdsample.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jdtrans.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jerror.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jfdctfst.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jfdctint.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jidctfst.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jidctint.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jidctred.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jmemmgr.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jmemnobs.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="libjpeg\fpdfapi_jutils.c">
+      <Filter>libjpeg</Filter>
+    </ClCompile>
+    <ClInclude Include="libjpeg\jchuff.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jconfig.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jdct.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jdhuff.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jerror.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jinclude.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jmemsys.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jmorecfg.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jpegint.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jpeglib.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\jversion.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="libjpeg\transupp.h">
+      <Filter>libjpeg</Filter>
+    </ClInclude>
+    <None Include="third_party.gyp"/>
+  </ItemGroup>
+</Project>

@@ -7,6 +7,7 @@
 #include "public/fpdf_edit.h"
 
 #include "fpdfsdk/include/fsdk_define.h"
+#include "public/fpdf_formfill.h"
 
 #ifdef PDF_ENABLE_XFA
 #include "fpdfsdk/include/fpdfxfa/fpdfxfa_app.h"

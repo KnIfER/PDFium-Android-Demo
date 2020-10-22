@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bigint">
+      <UniqueIdentifier>{13D7287A-810C-6212-59F6-9DA0CF746B99}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bigint\BigInteger.hh">
+      <Filter>bigint</Filter>
+    </None>
+    <None Include="bigint\BigIntegerLibrary.hh">
+      <Filter>bigint</Filter>
+    </None>
+    <None Include="bigint\BigIntegerUtils.hh">
+      <Filter>bigint</Filter>
+    </None>
+    <None Include="bigint\BigUnsigned.hh">
+      <Filter>bigint</Filter>
+    </None>
+    <None Include="bigint\NumberlikeArray.hh">
+      <Filter>bigint</Filter>
+    </None>
+    <None Include="bigint\BigUnsignedInABase.hh">
+      <Filter>bigint</Filter>
+    </None>
+    <ClCompile Include="bigint\BigInteger.cc">
+      <Filter>bigint</Filter>
+    </ClCompile>
+    <ClCompile Include="bigint\BigIntegerUtils.cc">
+      <Filter>bigint</Filter>
+    </ClCompile>
+    <ClCompile Include="bigint\BigUnsigned.cc">
+      <Filter>bigint</Filter>
+    </ClCompile>
+    <ClCompile Include="bigint\BigUnsignedInABase.cc">
+      <Filter>bigint</Filter>
+    </ClCompile>
+    <None Include="third_party.gyp"/>
+  </ItemGroup>
+</Project>

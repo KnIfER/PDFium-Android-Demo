@@ -22,7 +22,7 @@ android {
                 //cFlags "-D_EXAMPLE_C_FLAG1", "-D_EXAMPLE_C_FLAG2"
 
                 // Sets a flag to enable format macro constants for the C++ compiler.
-                cppFlags "-D__STDC_FORMAT_MACROS"
+                cppFlags "-D__STDC_FORMAT_MACROS -DFT2_BUILD_LIBRARY"
             }
         }
     }

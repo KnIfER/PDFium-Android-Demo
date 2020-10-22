@@ -7,16 +7,25 @@
 #include "public/fpdfview.h"
 
 #include <memory>
-#include <fpdfsdk/include/fsdk_mgr.h>
 
 #include "core/include/fxcodec/fx_codec.h"
 #include "core/include/fxcrt/fx_safe_types.h"
 #include "fpdfsdk/include/fsdk_define.h"
+#include "fpdfsdk/include/fsdk_mgr.h"
 #include "fpdfsdk/include/fsdk_rendercontext.h"
+#include "fpdfsdk/include/javascript/IJavaScript.h"
 #include "public/fpdf_ext.h"
 #include "public/fpdf_progressive.h"
 #include "third_party/base/numerics/safe_conversions_impl.h"
 
+#ifdef PDF_ENABLE_XFA
+#include "core/include/fpdfapi/fpdf_module.h"
+#include "fpdfsdk/include/fpdfxfa/fpdfxfa_app.h"
+#include "fpdfsdk/include/fpdfxfa/fpdfxfa_doc.h"
+#include "fpdfsdk/include/fpdfxfa/fpdfxfa_page.h"
+#include "fpdfsdk/include/fpdfxfa/fpdfxfa_util.h"
+#include "public/fpdf_formfill.h"
+#endif  // PDF_ENABLE_XFA
 
 UnderlyingDocumentType* UnderlyingFromFPDFDocument(FPDF_DOCUMENT doc) {
   return static_cast<UnderlyingDocumentType*>(doc);
@@ -231,10 +240,14 @@ DLLEXPORT void STDCALL FPDF_InitLibraryWithConfig(
   pModuleMgr->SetCodecModule(g_pCodecModule);
   pModuleMgr->InitPageModule();
   pModuleMgr->InitRenderModule();
+#ifdef PDF_ENABLE_XFA
+  CPDFXFA_App::GetInstance()->Initialize();
+#else   // PDF_ENABLE_XFA
   pModuleMgr->LoadEmbeddedGB1CMaps();
   pModuleMgr->LoadEmbeddedJapan1CMaps();
   pModuleMgr->LoadEmbeddedCNS1CMaps();
   pModuleMgr->LoadEmbeddedKorea1CMaps();
+#endif  // PDF_ENABLE_XFA
 }
 
 DLLEXPORT void STDCALL FPDF_DestroyLibrary() {
@@ -706,10 +719,24 @@ DLLEXPORT void STDCALL FPDF_RenderPageBitmap(FPDF_BITMAP bitmap,
 DLLEXPORT void STDCALL FPDF_ClosePage(FPDF_PAGE page) {
   if (!page)
     return;
+#ifdef PDF_ENABLE_XFA
+  CPDFXFA_Page* pPage = (CPDFXFA_Page*)page;
+  pPage->Release();
+#else   // PDF_ENABLE_XFA
+  CPDFSDK_PageView* pPageView =
+      (CPDFSDK_PageView*)(((CPDF_Page*)page))->GetPrivateData((void*)page);
+  if (pPageView && pPageView->IsLocked()) {
+    pPageView->TakeOverPage();
+    return;
+  }
   delete (CPDF_Page*)page;
+#endif  // PDF_ENABLE_XFA
 }
 
 DLLEXPORT void STDCALL FPDF_CloseDocument(FPDF_DOCUMENT document) {
+#ifdef PDF_ENABLE_XFA
+  delete UnderlyingFromFPDFDocument(document);
+#else   // PDF_ENABLE_XFA
   CPDF_Document* pDoc = CPDFDocumentFromFPDFDocument(document);
   if (!pDoc)
     return;
@@ -719,6 +746,7 @@ DLLEXPORT void STDCALL FPDF_CloseDocument(FPDF_DOCUMENT document) {
     return;
   }
   delete pParser;
+#endif  // PDF_ENABLE_XFA
 }
 
 DLLEXPORT unsigned long STDCALL FPDF_GetLastError() {

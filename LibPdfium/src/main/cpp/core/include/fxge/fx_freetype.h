@@ -8,12 +8,12 @@
 #define CORE_INCLUDE_FXGE_FX_FREETYPE_H_
 
 #include <ft2build.h>
-#include <freetype/freetype.h>
-#include <freetype/ftglyph.h>
-#include <freetype/ftlcdfil.h>
-#include <freetype/ftmm.h>
-#include <freetype/ftoutln.h>
-#include <freetype/tttables.h>
+#include <freetype.h>
+#include <ftglyph.h>
+#include <ftlcdfil.h>
+#include <ftmm.h>
+#include <ftoutln.h>
+#include <tttables.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

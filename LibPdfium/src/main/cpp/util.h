@@ -1,6 +1,7 @@
 //
 // Created by yangl on 2017/6/9.
 //
+//
 
 #ifndef _UTIL_HPP_
 #define _UTIL_HPP_
@@ -14,7 +15,7 @@ extern "C" {
 #include <android/log.h>
 
 #define JIN_PASSWORD_EXCEPTION "com/shockwave/pdfium/PdfPasswordException"
-#define JNI_FUNC(retType, name)  JNIEXPORT retType JNICALL Java_com_shockwave_pdfium_PdfiumCore_##name
+#define JNI_FUNC(retType, bindClass, name)  JNIEXPORT retType JNICALL Java_com_shockwave_pdfium_##bindClass##_##name
 #define JNI_ARGS    JNIEnv *env, jobject thiz
 
 #define LOG_TAG "jniPdfium"

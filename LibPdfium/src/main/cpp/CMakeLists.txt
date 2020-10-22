@@ -15,7 +15,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_PTHREADS")
 
 # 指定头文件目录
 include_directories (
-    ${SRC_HOME_PATH}
+    ${SRC_HOME_PATH}/
+    ${SRC_HOME_PATH}/public
     ${SRC_HOME_PATH}/third_party/freetype/include
     ${SRC_HOME_PATH}/third_party/freetype/include/freetype )
 
@@ -265,6 +266,14 @@ add_library(fx_zlib STATIC
     third_party/zlib_v128/zutil.c
 )
 
+add_library(fx_agg32 STATIC
+    third_party/agg23/agg_curves.cpp
+    third_party/agg23/agg_path_storage.cpp
+    third_party/agg23/agg_rasterizer_scanline_aa.cpp
+    third_party/agg23/agg_vcgen_dash.cpp
+    third_party/agg23/agg_vcgen_stroke.cpp
+)
+
 
 add_library(fxcodec STATIC
     core/src/fxcodec/codec/fx_codec.cpp
@@ -359,11 +368,6 @@ add_library(fxge STATIC
     core/src/fxge/ge/fx_ge_path.cpp
     core/src/fxge/ge/fx_ge_ps.cpp
     core/src/fxge/ge/fx_ge_text.cpp
-    third_party/agg23/agg_curves.cpp
-    third_party/agg23/agg_path_storage.cpp
-    third_party/agg23/agg_rasterizer_scanline_aa.cpp
-    third_party/agg23/agg_vcgen_dash.cpp
-    third_party/agg23/agg_vcgen_stroke.cpp
 
 )
 
@@ -400,13 +404,6 @@ add_library(fx_freetype STATIC
 
 
 add_library(pdfium STATIC
-    fpdfsdk/src/fpdfdoc.cpp
-    fpdfsdk/src/fpdfeditimg.cpp
-    fpdfsdk/src/fpdfeditpage.cpp
-    fpdfsdk/src/fpdfppo.cpp
-    fpdfsdk/src/fpdfsave.cpp
-    fpdfsdk/src/fpdftext.cpp
-    fpdfsdk/src/fpdfview.cpp
     fpdfsdk/src/fpdf_dataavail.cpp
     fpdfsdk/src/fpdf_ext.cpp
     fpdfsdk/src/fpdf_flatten.cpp
@@ -414,6 +411,19 @@ add_library(pdfium STATIC
     fpdfsdk/src/fpdf_searchex.cpp
     fpdfsdk/src/fpdf_sysfontinfo.cpp
     fpdfsdk/src/fpdf_transformpage.cpp
+    fpdfsdk/src/fpdfdoc.cpp
+    fpdfsdk/src/fpdfeditimg.cpp
+    fpdfsdk/src/fpdfeditpage.cpp
+    fpdfsdk/src/fpdfformfill.cpp
+    fpdfsdk/src/fpdfppo.cpp
+    fpdfsdk/src/fpdfsave.cpp
+    fpdfsdk/src/fpdftext.cpp
+    fpdfsdk/src/fpdfview.cpp
+    fpdfsdk/src/fsdk_actionhandler.cpp
+    fpdfsdk/src/fsdk_annothandler.cpp
+    fpdfsdk/src/fsdk_baseannot.cpp
+    fpdfsdk/src/fsdk_baseform.cpp
+    fpdfsdk/src/fsdk_mgr.cpp
     fpdfsdk/src/fsdk_rendercontext.cpp
     third_party/bigint/BigInteger.cc
     third_party/bigint/BigIntegerUtils.cc
@@ -449,6 +459,7 @@ target_link_libraries(
     fxcrt
     fxedit
     fxge
+    fx_agg32
     fx_freetype
 )
 

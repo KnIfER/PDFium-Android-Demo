@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="agg23">
+      <UniqueIdentifier>{C2FA5CF6-7917-EAF3-0F98-F991B0D46EE8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="agg23\agg_basics.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClInclude Include="agg23\agg_clip_liang_barsky.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClInclude Include="agg23\agg_conv_dash.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClInclude Include="agg23\agg_conv_stroke.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClCompile Include="agg23\agg_curves.cpp">
+      <Filter>agg23</Filter>
+    </ClCompile>
+    <ClInclude Include="agg23\agg_curves.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClCompile Include="agg23\agg_path_storage.cpp">
+      <Filter>agg23</Filter>
+    </ClCompile>
+    <ClInclude Include="agg23\agg_path_storage.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClCompile Include="agg23\agg_rasterizer_scanline_aa.cpp">
+      <Filter>agg23</Filter>
+    </ClCompile>
+    <ClInclude Include="agg23\agg_rasterizer_scanline_aa.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClInclude Include="agg23\agg_renderer_scanline.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClInclude Include="agg23\agg_rendering_buffer.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClInclude Include="agg23\agg_scanline_u.h">
+      <Filter>agg23</Filter>
+    </ClInclude>
+    <ClCompile Include="agg23\agg_vcgen_dash.cpp">
+      <Filter>agg23</Filter>
+    </ClCompile>
+    <ClCompile Include="agg23\agg_vcgen_stroke.cpp">
+      <Filter>agg23</Filter>
+    </ClCompile>
+    <None Include="third_party.gyp"/>
+  </ItemGroup>
+</Project>
