@@ -29,7 +29,6 @@ import static com.knizha.PDocViewer.util.Constants.Cache.CACHE_SIZE;
 import static com.knizha.PDocViewer.util.Constants.PRELOAD_OFFSET;
 
 class PagesLoader {
-
     private PDocView pDocView;
     private int cacheOrder;
     private float xOffset;
@@ -118,7 +117,6 @@ class PagesLoader {
      * calculate the render range of each page
      */
     private List<RenderRange> getRenderRangeList(float firstXOffset, float firstYOffset, float lastXOffset, float lastYOffset) {
-
         float fixedFirstXOffset = -MathUtils.max(firstXOffset, 0);
         float fixedFirstYOffset = -MathUtils.max(firstYOffset, 0);
 
@@ -245,7 +243,6 @@ class PagesLoader {
                 break;
             }
         }
-
     }
 
     private int loadPage(int page, int firstRow, int lastRow, int firstCol, int lastCol,
@@ -265,7 +262,6 @@ class PagesLoader {
     }
 
     private boolean loadCell(int page, int row, int col, float pageRelativePartWidth, float pageRelativePartHeight) {
-
         float relX = pageRelativePartWidth * col;
         float relY = pageRelativePartHeight * row;
         float relWidth = pageRelativePartWidth;
@@ -289,7 +285,7 @@ class PagesLoader {
                         pageRelativeBounds, false, cacheOrder, pDocView.bestQuality,
                         pDocView.annotationRendering);
             }
-
+			CMN.Log("renderWidth", renderWidth, renderHeight);
             cacheOrder++;
             return true;
         }

@@ -28,3 +28,6 @@ local.properties
 .gradle
 
 .DS_Store
+
+.cxx
+bk

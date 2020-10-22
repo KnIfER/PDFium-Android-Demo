@@ -16,7 +16,7 @@
 package com.knizha.PDocViewer;
 
 import android.graphics.RectF;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.knizha.PDocViewer.model.PagePart;
 

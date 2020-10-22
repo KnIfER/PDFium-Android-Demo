@@ -58,6 +58,7 @@ class RenderingHandler extends Handler {
         sendMessage(msg);
     }
 
+    //仅仅一个task哎
     @Override
     public void handleMessage(Message message) {
         RenderingTask task = (RenderingTask) message.obj;
@@ -85,31 +86,28 @@ class RenderingHandler extends Handler {
         }
     }
 
-    private PagePart proceed(RenderingTask renderingTask) throws PageRenderingException {
-        PdfFile pdfFile = pDocView.pdfFile;
-        pdfFile.openPage(renderingTask.page);
-
-        int w = Math.round(renderingTask.width);
-        int h = Math.round(renderingTask.height);
-
-        if (w == 0 || h == 0 || pdfFile.pageHasError(renderingTask.page)) {
+    private PagePart proceed(RenderingTask threadedTask) throws PageRenderingException {
+        PdfFile processing_docfile = pDocView.pdfFile;
+        processing_docfile.openPage(threadedTask.page);
+        int w = Math.round(threadedTask.width);
+        int h = Math.round(threadedTask.height);
+        if (w == 0 || h == 0 || processing_docfile.pageHasError(threadedTask.page)) {
             return null;
         }
-
         Bitmap render;
         try {
-            render = Bitmap.createBitmap(w, h, renderingTask.bestQuality ? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565);
+            render = Bitmap.createBitmap(w, h, threadedTask.bestQuality ? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565);
         } catch (IllegalArgumentException e) {
             Log.e(TAG, "Cannot create bitmap", e);
             return null;
         }
-        calculateBounds(w, h, renderingTask.bounds);
+        calculateBounds(w, h, threadedTask.bounds);
 
-        pdfFile.renderPageBitmap(render, renderingTask.page, roundedRenderBounds, renderingTask.annotationRendering);
+        processing_docfile.renderPageBitmap(render, threadedTask.page, roundedRenderBounds, threadedTask.annotationRendering);
 
-        return new PagePart(renderingTask.page, render,
-                renderingTask.bounds, renderingTask.thumbnail,
-                renderingTask.cacheOrder);
+        return new PagePart(threadedTask.page, render,
+                threadedTask.bounds, threadedTask.thumbnail,
+                threadedTask.cacheOrder);
     }
 
     private void calculateBounds(int width, int height, RectF pageSliceBounds) {
@@ -131,21 +129,13 @@ class RenderingHandler extends Handler {
     }
 
     private class RenderingTask {
-
         float width, height;
-
         RectF bounds;
-
         int page;
-
         boolean thumbnail;
-
         int cacheOrder;
-
         boolean bestQuality;
-
         boolean annotationRendering;
-
         RenderingTask(float width, float height, RectF bounds, int page, boolean thumbnail, int cacheOrder, boolean bestQuality, boolean annotationRendering) {
             this.page = page;
             this.width = width;

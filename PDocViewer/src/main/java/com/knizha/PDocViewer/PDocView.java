@@ -91,30 +91,16 @@ import java.util.List;
  * particular case, a userPage of 5 can refer to a documentPage of 17.
  */
 public class PDocView extends RelativeLayout {
-
     private static final String TAG = PDocView.class.getSimpleName();
-
     public static final float DEFAULT_MAX_SCALE = 3.0f;
     public static final float DEFAULT_MID_SCALE = 1.75f;
     public static final float DEFAULT_MIN_SCALE = 1.0f;
-
-    private float minZoom = DEFAULT_MIN_SCALE;
-    private float midZoom = DEFAULT_MID_SCALE;
-    private float maxZoom = DEFAULT_MAX_SCALE;
-
-    /**
-     * START - scrolling in first page direction
-     * END - scrolling in last page direction
-     * NONE - not scrolling
-     */
-    enum ScrollDir {
-        NONE,
-		START,
-		END
-    }
-
-    private ScrollDir scrollDir = ScrollDir.NONE;
-
+	
+	/** Pdfium core for loading and rendering PDFs */
+	private PdfiumCore pdfiumCore;
+	
+	PdfFile pdfFile;
+	
     /** Rendered parts go to the cache manager */
     CacheManager cacheManager;
 
@@ -124,23 +110,17 @@ public class PDocView extends RelativeLayout {
     /** Drag manager manage all touch events */
     private DragPinchManager dragPinchManager;
 
-    PdfFile pdfFile;
-
     /** The index of the current sequence */
     private int currentPage;
 
-    /**
-     * If you picture all the pages side by side in their optimal width,
+    /** If you picture all the pages side by side in their optimal width,
      * and taking into account the zoom level, the current offset is the
-     * position of the left border of the screen in this big picture
-     */
+     * position of the left border of the screen in this big picture */
     private float currentXOffset = 0;
 
-    /**
-     * If you picture all the pages side by side in their optimal width,
+    /** If you picture all the pages side by side in their optimal width,
      * and taking into account the zoom level, the current offset is the
-     * position of the left border of the screen in this big picture
-     */
+     * position of the left border of the screen in this big picture */
     private float currentYOffset = 0;
 
     /** The zoom level, always >= 1 */
@@ -159,40 +139,32 @@ public class PDocView extends RelativeLayout {
     private HandlerThread renderingHandlerThread;
     /** Handler always waiting in the background and rendering tasks */
     RenderingHandler renderingHandler;
-
     private PagesLoader pagesLoader;
-
     Callbacks callbacks = new Callbacks();
-
     /** Paint object for drawing */
     private Paint paint;
-
     /** Paint object for drawing debug stuff */
     private Paint debugPaint;
-
     /** Policy for fitting pages to screen */
     private FitPolicy pageFitPolicy = FitPolicy.WIDTH;
-
     private boolean fitEachPage = false;
-
     private int defaultPage = 0;
-
     /** True if should scroll through pages vertically instead of horizontally */
     private boolean swipeVertical = true;
-
     private boolean enableSwipe = true;
-
     private boolean doubletapEnabled = true;
-
     private boolean nightMode = false;
-
     private boolean pageSnap = false;
-
-    /** Pdfium core for loading and rendering PDFs */
-    private PdfiumCore pdfiumCore;
-
+	
+	private float minZoom = DEFAULT_MIN_SCALE;
+	private float midZoom = DEFAULT_MID_SCALE;
+	private float maxZoom = DEFAULT_MAX_SCALE;
+	/** START - scrolling in first page direction
+	 * END - scrolling in last page direction
+	 * NONE - not scrolling */
+	enum ScrollDir { NONE, START, END }
+	private ScrollDir scrollDir = ScrollDir.NONE;
     private ScrollHandle scrollHandle;
-
     private boolean isScrollHandleInit = false;
 
     ScrollHandle getScrollHandle() {
@@ -217,7 +189,7 @@ public class PDocView extends RelativeLayout {
     /** Add dynamic spacing to fit each page separately on the screen. */
     private boolean autoSpacing = false;
 
-    /** Fling a single page at a time */ // 大傻逼
+    /** Fling a single page at a time */
     private boolean pageFling = false;
 
     /** Pages numbers used when calling onDrawAllListener */
@@ -232,23 +204,16 @@ public class PDocView extends RelativeLayout {
     /** Construct the initial view */
     public PDocView(Context context, AttributeSet set) {
         super(context, set);
-
         renderingHandlerThread = new HandlerThread("PDF renderer");
-
-        if (isInEditMode()) {
-            return;
-        }
-
-        cacheManager = new CacheManager();
-        animationManager = new AnimationManager(this);
-        dragPinchManager = new DragPinchManager(this, animationManager);
-        pagesLoader = new PagesLoader(this);
-
-        paint = new Paint();
-        debugPaint = new Paint();
-        debugPaint.setStyle(Style.STROKE);
-
-        pdfiumCore = new PdfiumCore(context);
+        if (isInEditMode()) return;
+		pdfiumCore = new PdfiumCore(context);
+		cacheManager = new CacheManager();
+		animationManager = new AnimationManager(this);
+		dragPinchManager = new DragPinchManager(this, animationManager);
+		pagesLoader = new PagesLoader(this);
+		paint = new Paint();
+		debugPaint = new Paint();
+		debugPaint.setStyle(Style.STROKE);
         setWillNotDraw(false);
     }
 
@@ -262,16 +227,12 @@ public class PDocView extends RelativeLayout {
         decodingAsyncTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
-    /**
-     * Go to the given page.
-     *
-     * @param page Page index.
-     */
+    /** Go to the given page.
+     * @param page Page index. */
     public void jumpTo(int page, boolean withAnimation) {
         if (pdfFile == null) {
             return;
         }
-
         page = pdfFile.determineValidPageNumberFrom(page);
         float offset = page == 0 ? 0 : -pdfFile.getPageOffset(page, zoom);
         if (swipeVertical) {
@@ -298,18 +259,16 @@ public class PDocView extends RelativeLayout {
         if (recycled) {
             return;
         }
-
         // Check the page number and makes the
         // difference between UserPages and DocumentPages
         pageNb = pdfFile.determineValidPageNumberFrom(pageNb);
         currentPage = pageNb;
-
+        
         loadPages();
-
+        
         if (scrollHandle != null && !documentFitsView()) {
             scrollHandle.setPageNum(currentPage + 1);
         }
-
         callbacks.callOnPageChange(currentPage, pdfFile.getPagesCount());
     }
 
@@ -379,7 +338,7 @@ public class PDocView extends RelativeLayout {
         }
     }
 
-    void enableDoubletap(boolean enableDoubletap) {
+    public void enableDoubletap(boolean enableDoubletap) {
         this.doubletapEnabled = enableDoubletap;
     }
 
@@ -587,15 +546,12 @@ public class PDocView extends RelativeLayout {
         } else {
             bg.draw(canvas);
         }
-
         if (recycled) {
             return;
         }
-
         if (state != State.SHOWN) {
             return;
         }
-
         // Moves the canvas before drawing any element
         float currentXOffset = this.currentXOffset;
         float currentYOffset = this.currentYOffset;
@@ -604,7 +560,6 @@ public class PDocView extends RelativeLayout {
         // Draws thumbnails
         for (PagePart part : cacheManager.getThumbnails()) {
             drawPart(canvas, part);
-
         }
 
         // Draws parts
@@ -615,14 +570,11 @@ public class PDocView extends RelativeLayout {
                 onDrawPagesNums.add(part.getPage());
             }
         }
-
         for (Integer page : onDrawPagesNums) {
             drawWithListener(canvas, page, callbacks.getOnDrawAll());
         }
         onDrawPagesNums.clear();
-
         drawWithListener(canvas, currentPage, callbacks.getOnDraw());
-
         // Restores the canvas position
         canvas.translate(-currentXOffset, -currentYOffset);
     }
@@ -658,12 +610,11 @@ public class PDocView extends RelativeLayout {
         if (renderedBitmap.isRecycled()) {
             return;
         }
-
         // Move to the target page
         float localTranslationX = 0;
         float localTranslationY = 0;
         SizeF size = pdfFile.getPageSize(part.getPage());
-
+        
         if (swipeVertical) {
             localTranslationY = pdfFile.getPageOffset(part.getPage(), zoom);
             float maxWidth = pdfFile.getMaxPageWidth();
@@ -708,7 +659,6 @@ public class PDocView extends RelativeLayout {
 
         // Restore the canvas position
         canvas.translate(-localTranslationX, -localTranslationY);
-
     }
 
     /**
@@ -732,24 +682,18 @@ public class PDocView extends RelativeLayout {
     /** Called when the PDF is loaded */
     void loadComplete(PdfFile pdfFile) {
         state = State.LOADED;
-
         this.pdfFile = pdfFile;
-
         if (!renderingHandlerThread.isAlive()) {
             renderingHandlerThread.start();
         }
         renderingHandler = new RenderingHandler(renderingHandlerThread.getLooper(), this);
         renderingHandler.start();
-
         if (scrollHandle != null) {
             scrollHandle.setupLayout(this);
             isScrollHandleInit = true;
         }
-
         dragPinchManager.enable();
-
         callbacks.callOnLoadComplete(pdfFile.getPagesCount());
-
         jumpTo(defaultPage, false);
     }
 
@@ -836,7 +780,8 @@ public class PDocView extends RelativeLayout {
             } else {
                 scrollDir = ScrollDir.NONE;
             }
-        } else {
+        }
+        else {
             // Check Y offset
             float scaledPageHeight = toCurrentScale(pdfFile.getMaxPageHeight());
             if (scaledPageHeight < getHeight()) {

@@ -126,7 +126,6 @@ class AnimationManager {
     }
 
     class XAnimation extends AnimatorListenerAdapter implements AnimatorUpdateListener {
-
         @Override
         public void onAnimationUpdate(ValueAnimator animation) {
             float offset = (Float) animation.getAnimatedValue();
@@ -150,7 +149,6 @@ class AnimationManager {
     }
 
     class YAnimation extends AnimatorListenerAdapter implements AnimatorUpdateListener {
-
         @Override
         public void onAnimationUpdate(ValueAnimator animation) {
             float offset = (Float) animation.getAnimatedValue();
@@ -174,7 +172,6 @@ class AnimationManager {
     }
 
     class ZoomAnimation implements AnimatorUpdateListener, AnimatorListener {
-
         private final float centerX;
         private final float centerY;
 
@@ -209,7 +206,6 @@ class AnimationManager {
         @Override
         public void onAnimationStart(Animator animation) {
         }
-
     }
 
     private void hideHandle() {
@@ -217,5 +213,4 @@ class AnimationManager {
             pDocView.getScrollHandle().hideDelayed();
         }
     }
-
 }

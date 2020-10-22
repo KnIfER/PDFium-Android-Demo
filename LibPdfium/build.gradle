@@ -2,22 +2,46 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
-
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
-        versionName "3.2.0-beta.1"
+        versionName "1.0"
+
+        ndk {
+            //生成相应平台.so
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        externalNativeBuild {
+            cmake {
+                // Passes optional arguments to CMake.
+                arguments '-DANDROID_PLATFORM=android-19', '-DANDROID_TOOLCHAIN=clang'
+
+                // Sets optional flags for the C compiler.
+                //cFlags "-D_EXAMPLE_C_FLAG1", "-D_EXAMPLE_C_FLAG2"
+
+                // Sets a flag to enable format macro constants for the C++ compiler.
+                cppFlags "-D__STDC_FORMAT_MACROS"
+            }
+        }
     }
 
-    sourceSets{
-        main {
-            jni.srcDirs = []
-            jniLibs.srcDir 'src/main/libs'
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
         }
     }
 }
 
 dependencies {
-    implementation 'com.android.support:support-compat:28.0.0'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api("androidx.appcompat:appcompat:1.1.0-rc01")
 }

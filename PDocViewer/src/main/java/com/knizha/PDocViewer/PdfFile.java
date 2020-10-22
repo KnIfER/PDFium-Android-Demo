@@ -28,11 +28,14 @@ import com.shockwave.pdfium.PdfiumCore;
 import com.shockwave.pdfium.util.Size;
 import com.shockwave.pdfium.util.SizeF;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 class PdfFile {
-
     private static final Object lock = new Object();
     private PdfDocument pdfDocument;
     private PdfiumCore pdfiumCore;
@@ -259,7 +262,6 @@ class PdfFile {
         if (docPage < 0) {
             return false;
         }
-
         synchronized (lock) {
             if (openedPages.indexOfKey(docPage) < 0) {
                 try {
@@ -282,8 +284,23 @@ class PdfFile {
 
     public void renderPageBitmap(Bitmap bitmap, int pageIndex, Rect bounds, boolean annotationRendering) {
         int docPage = documentPage(pageIndex);
+        CMN.Log("renderPageBitmap", docPage, "size", bounds.left, bounds.top, bounds.width(), bounds.height(), "bw", bitmap.getWidth(), bitmap.getHeight());
         pdfiumCore.renderPageBitmap(pdfDocument, bitmap, docPage,
                 bounds.left, bounds.top, bounds.width(), bounds.height(), annotationRendering);
+        File debugFile = new File("/sdcard/myFolder/tmpBitmap.png");
+        int cc=0;
+        while (debugFile.exists()) {
+			debugFile = new File("/sdcard/myFolder/tmpBitmap."+cc+".png");
+			cc++;
+		}
+        if(false)
+		try {
+			FileOutputStream fout = new FileOutputStream(debugFile);
+			bitmap.compress(Bitmap.CompressFormat.PNG, 8, fout);
+			fout.close();
+		} catch (IOException e) {
+			CMN.Log(e);
+		}
     }
 
     public PdfDocument.Meta getMetaData() {
@@ -339,11 +356,9 @@ class PdfFile {
 
     public int documentPage(int userPage) {
         int documentPage = userPage;
-
         if (documentPage < 0 || userPage >= getPagesCount()) {
             return -1;
         }
-
         return documentPage;
     }
 }
