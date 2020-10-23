@@ -6,7 +6,7 @@ Using submodule [LibPDFium](https://github.com/KnIfER/LibPDFium).
 git clone --recursive https://github.com/KnIfER/PDFium-Android-Demo.git
 ```
 
-Pdfium source codes are pulled from ASOP/android7.2.1_r36
+Pdfium source codes are pulled from AOSP/android7.2.1_r36
 
 Sepcial Thanks:
 - `bash-ndk *.mk` buildscripts via [barteksc/modpdfium](https://github.com/barteksc/modpdfium)
@@ -18,7 +18,7 @@ Sepcial Thanks:
 
 # PDFium Android Demo Viewer
 
-The beheaviour of this projetc is just like the original Demo project : *barteksc/AndroidPdfViewer*  
+The beheaviour of this project is just like the original Demo project : *barteksc/AndroidPdfViewer*  
 
 Yet this repo contains **three** build systems  :
 
