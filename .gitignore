@@ -31,3 +31,6 @@ local.properties
 
 .cxx
 bk
+*.so
+*.d
+*.o
