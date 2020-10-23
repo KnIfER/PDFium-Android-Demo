@@ -1,3 +1,3 @@
-include ':LibPdfiumSep'
+include ':LibPdfium'
 include ':PDocViewer'
 

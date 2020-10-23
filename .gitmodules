@@ -1,0 +1,3 @@
+[submodule "LibPdfium\\src\\main\\PDFIUM"]
+	path = LibPdfium\\src\\main\\PDFIUM
+	url = https://github.com/KnIfER/LibPDFium.git

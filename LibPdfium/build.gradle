@@ -27,6 +27,12 @@ android {
         }
     }
 
+//    sourceSets{
+//        main {
+//            jni.srcDirs = [ '../LibPdfium/src/main/jni']
+//        }
+//    }
+
     buildTypes {
         release {
             minifyEnabled false
