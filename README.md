@@ -1,4 +1,11 @@
 
+# Get the source
+Using submodule [LibPDFium](https://github.com/KnIfER/LibPDFium).
+
+```
+git clone --recursive https://github.com/KnIfER/PDFium-Android-Demo.git
+```
+
 Pdfium source codes are pulled from ASOP/android7.2.1_r36
 
 Sepcial Thanks:
@@ -6,7 +13,7 @@ Sepcial Thanks:
 
 - `cmake` buildscript via [freedom10086/PdfiumAndroid](https://github.com/freedom10086/PdfiumAndroid)
 
-- `Java&Jni` via [barteksc/AndroidPdfViewer](https://github.com/barteksc/AndroidPdfViewer)
+- `Java & Jni` via [barteksc/AndroidPdfViewer](https://github.com/barteksc/AndroidPdfViewer)
 
 
 # PDFium Android Demo Viewer
