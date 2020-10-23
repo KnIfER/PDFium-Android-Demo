@@ -22,11 +22,7 @@ public class PdfiumCore {
     private static final String FD_FIELD_NAME = "descriptor";
 
     static {
-		System.loadLibrary("c++_shared");
-		System.loadLibrary("modpng");
-//            System.loadLibrary("modft2");
-		System.loadLibrary("pdfium");
-		System.loadLibrary("jniPdfium");
+		System.loadLibrary("pdfium-lib");
     }
 
     private native long nativeOpenDocument(int fd, String password);
