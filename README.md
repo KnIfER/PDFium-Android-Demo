@@ -23,7 +23,7 @@ The beheaviour of this projetc is just like the original Demo project : *barteks
 Yet this repo contains **three** build systems  :
 
 1. **bash-ndk.**   
-Use : Activate the LibPdfiumSep library module. Then right click on the `jni` folder and select 'Open In Ternimal' in the android studio. Run `ndk-build` and done !  
+Use : Activate the LibPdfiumSep library module. Then right click on the `jni` folder and select 'Open In Ternimal' in the android studio. Run `ndk-build` and (hopefully) done !  
 Develop : To develop the pre-compiled libpdfium.so, prepare win10 ubuntu subsystem or a real linux system.  `make` third_party, core , and fpdf_sdk sequentially.
 
 2. **cmake.**  
