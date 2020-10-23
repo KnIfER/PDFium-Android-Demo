@@ -11,7 +11,7 @@ Sepcial Thanks:
 
 # PDFium Android Demo Viewer
 
-The Java beheaviour of this projetc is just like the original Demo project : *barteksc/AndroidPdfViewer*  
+The beheaviour of this projetc is just like the original Demo project : *barteksc/AndroidPdfViewer*  
 
 Yet this repo contains **three** build systems  :
 
