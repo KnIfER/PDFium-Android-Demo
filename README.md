@@ -1,5 +1,5 @@
 
-# Get the source
+# Get the source code
 Using submodule [LibPDFium](https://github.com/KnIfER/LibPDFium).
 
 ```
