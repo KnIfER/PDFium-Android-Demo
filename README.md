@@ -8,7 +8,7 @@ git clone --recursive https://github.com/KnIfER/PDFium-Android-Demo.git
 
 Pdfium source codes are pulled from AOSP/android7.2.1_r36
 
-Sepcial Thanks:
+Special Thanks:
 - `bash-ndk *.mk` buildscripts via [barteksc/modpdfium](https://github.com/barteksc/modpdfium)
 
 - `cmake` buildscript via [freedom10086/PdfiumAndroid](https://github.com/freedom10086/PdfiumAndroid)
