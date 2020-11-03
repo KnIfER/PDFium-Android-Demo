@@ -1,11 +1,11 @@
 #include "util.h"
 
 extern "C" {
-#include <unistd.h>
-#include <sys/mman.h>
-#include <sys/stat.h>
-#include <string.h>
-#include <stdio.h>
+    #include <unistd.h>
+    #include <sys/mman.h>
+    #include <sys/stat.h>
+    #include <string.h>
+    #include <stdio.h>
 }
 
 #include <android/native_window.h>
@@ -48,10 +48,10 @@ struct rgb {
 };
 
 class DocumentFile {
-private:
+    private:
     int fileFd;
 
-public:
+    public:
     FPDF_DOCUMENT pdfDocument = NULL;
     size_t fileSize;
 
@@ -68,9 +68,9 @@ DocumentFile::~DocumentFile(){
 
 template <class string_type>
 inline typename string_type::value_type* WriteInto(string_type* str, size_t length_with_null) {
-    str->reserve(length_with_null);
-    str->resize(length_with_null - 1);
-    return &((*str)[0]);
+  str->reserve(length_with_null);
+  str->resize(length_with_null - 1);
+  return &((*str)[0]);
 }
 
 inline long getFileSize(int fd){
@@ -170,7 +170,7 @@ void rgbBitmapTo565(void *source, int sourceStride, void *dest, AndroidBitmapInf
 extern "C" { //For JNI support
 
 static int getBlock(void* param, unsigned long position, unsigned char* outBuffer,
-                    unsigned long size) {
+        unsigned long size) {
     const int fd = reinterpret_cast<intptr_t>(param);
     const int readCount = pread(fd, outBuffer, size, position);
     if (readCount < 0) {
@@ -180,103 +180,102 @@ static int getBlock(void* param, unsigned long position, unsigned char* outBuffe
     return 1;
 }
 
-
 JNI_FUNC(jlong, PdfiumCore, nativeOpenDocument)(JNI_ARGS, jint fd, jstring password){
 
-size_t fileLength = (size_t)getFileSize(fd);
-if(fileLength <= 0) {
-jniThrowException(env, "java/io/IOException",
-"File is empty");
-return -1;
-}
+    size_t fileLength = (size_t)getFileSize(fd);
+    if(fileLength <= 0) {
+        jniThrowException(env, "java/io/IOException",
+                                    "File is empty");
+        return -1;
+    }
 
-DocumentFile *docFile = new DocumentFile();
+    DocumentFile *docFile = new DocumentFile();
 
-FPDF_FILEACCESS loader;
-loader.m_FileLen = fileLength;
-loader.m_Param = reinterpret_cast<void*>(intptr_t(fd));
-loader.m_GetBlock = &getBlock;
+    FPDF_FILEACCESS loader;
+    loader.m_FileLen = fileLength;
+    loader.m_Param = reinterpret_cast<void*>(intptr_t(fd));
+    loader.m_GetBlock = &getBlock;
 
-const char *cpassword = NULL;
-if(password != NULL) {
-cpassword = env->GetStringUTFChars(password, NULL);
-}
+    const char *cpassword = NULL;
+    if(password != NULL) {
+        cpassword = env->GetStringUTFChars(password, NULL);
+    }
 
-FPDF_DOCUMENT document = FPDF_LoadCustomDocument(&loader, cpassword);
+    FPDF_DOCUMENT document = FPDF_LoadCustomDocument(&loader, cpassword);
 
-if(cpassword != NULL) {
-env->ReleaseStringUTFChars(password, cpassword);
-}
+    if(cpassword != NULL) {
+        env->ReleaseStringUTFChars(password, cpassword);
+    }
 
-if (!document) {
-delete docFile;
+    if (!document) {
+        delete docFile;
 
-const long errorNum = FPDF_GetLastError();
-if(errorNum == FPDF_ERR_PASSWORD) {
-jniThrowException(env, "com/shockwave/pdfium/PdfPasswordException",
-"Password required or incorrect password.");
-} else {
-char* error = getErrorDescription(errorNum);
-jniThrowExceptionFmt(env, "java/io/IOException",
-"cannot create document: %s", error);
+        const long errorNum = FPDF_GetLastError();
+        if(errorNum == FPDF_ERR_PASSWORD) {
+            jniThrowException(env, "com/shockwave/pdfium/PdfPasswordException",
+                                    "Password required or incorrect password.");
+        } else {
+            char* error = getErrorDescription(errorNum);
+            jniThrowExceptionFmt(env, "java/io/IOException",
+                                    "cannot create document: %s", error);
 
-free(error);
-}
+            free(error);
+        }
 
-return -1;
-}
+        return -1;
+    }
 
-docFile->pdfDocument = document;
+    docFile->pdfDocument = document;
 
-return reinterpret_cast<jlong>(docFile);
+    return reinterpret_cast<jlong>(docFile);
 }
 
 JNI_FUNC(jlong, PdfiumCore, nativeOpenMemDocument)(JNI_ARGS, jbyteArray data, jstring password){
-DocumentFile *docFile = new DocumentFile();
+    DocumentFile *docFile = new DocumentFile();
 
-const char *cpassword = NULL;
-if(password != NULL) {
-cpassword = env->GetStringUTFChars(password, NULL);
-}
+    const char *cpassword = NULL;
+    if(password != NULL) {
+        cpassword = env->GetStringUTFChars(password, NULL);
+    }
 
-jbyte *cData = env->GetByteArrayElements(data, NULL);
-int size = (int) env->GetArrayLength(data);
-jbyte *cDataCopy = new jbyte[size];
-memcpy(cDataCopy, cData, size);
-FPDF_DOCUMENT document = FPDF_LoadMemDocument( reinterpret_cast<const void*>(cDataCopy),
-                                               size, cpassword);
-env->ReleaseByteArrayElements(data, cData, JNI_ABORT);
+    jbyte *cData = env->GetByteArrayElements(data, NULL);
+    int size = (int) env->GetArrayLength(data);
+    jbyte *cDataCopy = new jbyte[size];
+    memcpy(cDataCopy, cData, size);
+    FPDF_DOCUMENT document = FPDF_LoadMemDocument( reinterpret_cast<const void*>(cDataCopy),
+                                                          size, cpassword);
+    env->ReleaseByteArrayElements(data, cData, JNI_ABORT);
 
-if(cpassword != NULL) {
-env->ReleaseStringUTFChars(password, cpassword);
-}
+    if(cpassword != NULL) {
+        env->ReleaseStringUTFChars(password, cpassword);
+    }
 
-if (!document) {
-delete docFile;
+    if (!document) {
+        delete docFile;
 
-const long errorNum = FPDF_GetLastError();
-if(errorNum == FPDF_ERR_PASSWORD) {
-jniThrowException(env, "com/shockwave/pdfium/PdfPasswordException",
-"Password required or incorrect password.");
-} else {
-char* error = getErrorDescription(errorNum);
-jniThrowExceptionFmt(env, "java/io/IOException",
-"cannot create document: %s", error);
+        const long errorNum = FPDF_GetLastError();
+        if(errorNum == FPDF_ERR_PASSWORD) {
+            jniThrowException(env, "com/shockwave/pdfium/PdfPasswordException",
+                                    "Password required or incorrect password.");
+        } else {
+            char* error = getErrorDescription(errorNum);
+            jniThrowExceptionFmt(env, "java/io/IOException",
+                                    "cannot create document: %s", error);
 
-free(error);
-}
+            free(error);
+        }
 
-return -1;
-}
+        return -1;
+    }
 
-docFile->pdfDocument = document;
+    docFile->pdfDocument = document;
 
-return reinterpret_cast<jlong>(docFile);
+    return reinterpret_cast<jlong>(docFile);
 }
 
 JNI_FUNC(jint, PdfiumCore, nativeGetPageCount)(JNI_ARGS, jlong documentPtr){
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(documentPtr);
-return (jint)FPDF_GetPageCount(doc->pdfDocument);
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(documentPtr);
+    return (jint)FPDF_GetPageCount(doc->pdfDocument);
 }
 
 JNI_FUNC(void, PdfiumCore, nativeCloseDocument)(JNI_ARGS, jlong documentPtr){
@@ -303,7 +302,7 @@ static jlong loadPageInternal(JNIEnv *env, DocumentFile *doc, int pageIndex){
         LOGE("%s", msg);
 
         jniThrowException(env, "java/lang/IllegalStateException",
-                          "cannot load page");
+                                "cannot load page");
 
         return -1;
     }
@@ -312,24 +311,24 @@ static jlong loadPageInternal(JNIEnv *env, DocumentFile *doc, int pageIndex){
 static void closePageInternal(jlong pagePtr) { FPDF_ClosePage(reinterpret_cast<FPDF_PAGE>(pagePtr)); }
 
 JNI_FUNC(jlong, PdfiumCore, nativeLoadPage)(JNI_ARGS, jlong docPtr, jint pageIndex){
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
-return loadPageInternal(env, doc, (int)pageIndex);
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
+    return loadPageInternal(env, doc, (int)pageIndex);
 }
 JNI_FUNC(jlongArray, PdfiumCore, nativeLoadPages)(JNI_ARGS, jlong docPtr, jint fromIndex, jint toIndex){
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
 
-if(toIndex < fromIndex) return NULL;
-jlong pages[ toIndex - fromIndex + 1 ];
+    if(toIndex < fromIndex) return NULL;
+    jlong pages[ toIndex - fromIndex + 1 ];
 
-int i;
-for(i = 0; i <= (toIndex - fromIndex); i++){
-pages[i] = loadPageInternal(env, doc, (int)(i + fromIndex));
-}
+    int i;
+    for(i = 0; i <= (toIndex - fromIndex); i++){
+        pages[i] = loadPageInternal(env, doc, (int)(i + fromIndex));
+    }
 
-jlongArray javaPages = env -> NewLongArray( (jsize)(toIndex - fromIndex + 1) );
-env -> SetLongArrayRegion(javaPages, 0, (jsize)(toIndex - fromIndex + 1), (const jlong*)pages);
+    jlongArray javaPages = env -> NewLongArray( (jsize)(toIndex - fromIndex + 1) );
+    env -> SetLongArrayRegion(javaPages, 0, (jsize)(toIndex - fromIndex + 1), (const jlong*)pages);
 
-return javaPages;
+    return javaPages;
 }
 
 JNI_FUNC(void, PdfiumCore, nativeClosePage)(JNI_ARGS, jlong pagePtr){ closePageInternal(pagePtr); }
@@ -342,46 +341,46 @@ JNI_FUNC(void, PdfiumCore, nativeClosePages)(JNI_ARGS, jlongArray pagesPtr){
 }
 
 JNI_FUNC(jint, PdfiumCore, nativeGetPageWidthPixel)(JNI_ARGS, jlong pagePtr, jint dpi){
-FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
-return (jint)(FPDF_GetPageWidth(page) * dpi / 72);
+    FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
+    return (jint)(FPDF_GetPageWidth(page) * dpi / 72);
 }
 JNI_FUNC(jint, PdfiumCore, nativeGetPageHeightPixel)(JNI_ARGS, jlong pagePtr, jint dpi){
-FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
-return (jint)(FPDF_GetPageHeight(page) * dpi / 72);
+    FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
+    return (jint)(FPDF_GetPageHeight(page) * dpi / 72);
 }
 
 JNI_FUNC(jint, PdfiumCore, nativeGetPageWidthPoint)(JNI_ARGS, jlong pagePtr){
-FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
-return (jint)FPDF_GetPageWidth(page);
+    FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
+    return (jint)FPDF_GetPageWidth(page);
 }
 JNI_FUNC(jint, PdfiumCore, nativeGetPageHeightPoint)(JNI_ARGS, jlong pagePtr){
-FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
-return (jint)FPDF_GetPageHeight(page);
+    FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
+    return (jint)FPDF_GetPageHeight(page);
 }
 JNI_FUNC(jobject, PdfiumCore, nativeGetPageSizeByIndex)(JNI_ARGS, jlong docPtr, jint pageIndex, jint dpi){
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
-if(doc == NULL) {
-LOGE("Document is null");
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
+    if(doc == NULL) {
+        LOGE("Document is null");
 
-jniThrowException(env, "java/lang/IllegalStateException",
-"Document is null");
-return NULL;
-}
+        jniThrowException(env, "java/lang/IllegalStateException",
+                               "Document is null");
+        return NULL;
+    }
 
-double width, height;
-int result = FPDF_GetPageSizeByIndex(doc->pdfDocument, pageIndex, &width, &height);
+    double width, height;
+    int result = FPDF_GetPageSizeByIndex(doc->pdfDocument, pageIndex, &width, &height);
 
-if (result == 0) {
-width = 0;
-height = 0;
-}
+    if (result == 0) {
+        width = 0;
+        height = 0;
+    }
 
-jint widthInt = (jint) (width * dpi / 72);
-jint heightInt = (jint) (height * dpi / 72);
+    jint widthInt = (jint) (width * dpi / 72);
+    jint heightInt = (jint) (height * dpi / 72);
 
-jclass clazz = env->FindClass("com/shockwave/pdfium/util/Size");
-jmethodID constructorID = env->GetMethodID(clazz, "<init>", "(II)V");
-return env->NewObject(clazz, constructorID, widthInt, heightInt);
+    jclass clazz = env->FindClass("com/shockwave/pdfium/util/Size");
+    jmethodID constructorID = env->GetMethodID(clazz, "<init>", "(II)V");
+    return env->NewObject(clazz, constructorID, widthInt, heightInt);
 }
 
 static void renderPageInternal( FPDF_PAGE page,
@@ -414,7 +413,7 @@ static void renderPageInternal( FPDF_PAGE page,
     int flags = FPDF_REVERSE_BYTE_ORDER;
 
     if(renderAnnot) {
-        flags |= FPDF_ANNOT;
+    	flags |= FPDF_ANNOT;
     }
 
     FPDFBitmap_FillRect( pdfBitmap, baseX, baseY, baseHorSize, baseVerSize,
@@ -468,9 +467,9 @@ JNI_FUNC(void, PdfiumCore, nativeRenderPage)(JNI_ARGS, jlong pagePtr, jobject ob
 }
 
 JNI_FUNC(void, PdfiumCore, nativeRenderPageBitmap)(JNI_ARGS, jlong pagePtr, jobject bitmap,
-                                                   jint dpi, jint startX, jint startY,
-                                                   jint drawSizeHor, jint drawSizeVer,
-                                                   jboolean renderAnnot){
+                                             jint dpi, jint startX, jint startY,
+                                             jint drawSizeHor, jint drawSizeVer,
+                                             jboolean renderAnnot){
 
     FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
 
@@ -514,7 +513,7 @@ JNI_FUNC(void, PdfiumCore, nativeRenderPageBitmap)(JNI_ARGS, jlong pagePtr, jobj
     }
 
     FPDF_BITMAP pdfBitmap = FPDFBitmap_CreateEx( canvasHorSize, canvasVerSize,
-                                                 format, tmp, sourceStride);
+                                                     format, tmp, sourceStride);
 
     /*LOGD("Start X: %d", startX);
     LOGD("Start Y: %d", startY);
@@ -535,7 +534,7 @@ JNI_FUNC(void, PdfiumCore, nativeRenderPageBitmap)(JNI_ARGS, jlong pagePtr, jobj
     int flags = FPDF_REVERSE_BYTE_ORDER;
 
     if(renderAnnot) {
-        flags |= FPDF_ANNOT;
+    	flags |= FPDF_ANNOT;
     }
 
     FPDFBitmap_FillRect( pdfBitmap, baseX, baseY, baseHorSize, baseVerSize,
@@ -555,138 +554,138 @@ JNI_FUNC(void, PdfiumCore, nativeRenderPageBitmap)(JNI_ARGS, jlong pagePtr, jobj
 }
 
 JNI_FUNC(jstring, PdfiumCore, nativeGetDocumentMetaText)(JNI_ARGS, jlong docPtr, jstring tag) {
-const char *ctag = env->GetStringUTFChars(tag, NULL);
-if (ctag == NULL) {
-return env->NewStringUTF("");
-}
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
+    const char *ctag = env->GetStringUTFChars(tag, NULL);
+    if (ctag == NULL) {
+        return env->NewStringUTF("");
+    }
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
 
-size_t bufferLen = FPDF_GetMetaText(doc->pdfDocument, ctag, NULL, 0);
-if (bufferLen <= 2) {
-return env->NewStringUTF("");
-}
-std::wstring text;
-FPDF_GetMetaText(doc->pdfDocument, ctag, WriteInto(&text, bufferLen + 1), bufferLen);
-env->ReleaseStringUTFChars(tag, ctag);
-return env->NewString((jchar*) text.c_str(), bufferLen / 2 - 1);
+    size_t bufferLen = FPDF_GetMetaText(doc->pdfDocument, ctag, NULL, 0);
+    if (bufferLen <= 2) {
+        return env->NewStringUTF("");
+    }
+    std::wstring text;
+    FPDF_GetMetaText(doc->pdfDocument, ctag, WriteInto(&text, bufferLen + 1), bufferLen);
+    env->ReleaseStringUTFChars(tag, ctag);
+    return env->NewString((jchar*) text.c_str(), bufferLen / 2 - 1);
 }
 
 JNI_FUNC(jobject, PdfiumCore, nativeGetFirstChildBookmark)(JNI_ARGS, jlong docPtr, jobject bookmarkPtr) {
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
-FPDF_BOOKMARK parent;
-if(bookmarkPtr == NULL) {
-parent = NULL;
-} else {
-jclass longClass = env->GetObjectClass(bookmarkPtr);
-jmethodID longValueMethod = env->GetMethodID(longClass, "longValue", "()J");
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
+    FPDF_BOOKMARK parent;
+    if(bookmarkPtr == NULL) {
+        parent = NULL;
+    } else {
+        jclass longClass = env->GetObjectClass(bookmarkPtr);
+        jmethodID longValueMethod = env->GetMethodID(longClass, "longValue", "()J");
 
-jlong ptr = env->CallLongMethod(bookmarkPtr, longValueMethod);
-parent = reinterpret_cast<FPDF_BOOKMARK>(ptr);
-}
-FPDF_BOOKMARK bookmark = FPDFBookmark_GetFirstChild(doc->pdfDocument, parent);
-if (bookmark == NULL) {
-return NULL;
-}
-return NewLong(env, reinterpret_cast<jlong>(bookmark));
+        jlong ptr = env->CallLongMethod(bookmarkPtr, longValueMethod);
+        parent = reinterpret_cast<FPDF_BOOKMARK>(ptr);
+    }
+    FPDF_BOOKMARK bookmark = FPDFBookmark_GetFirstChild(doc->pdfDocument, parent);
+    if (bookmark == NULL) {
+        return NULL;
+    }
+    return NewLong(env, reinterpret_cast<jlong>(bookmark));
 }
 
 JNI_FUNC(jobject, PdfiumCore, nativeGetSiblingBookmark)(JNI_ARGS, jlong docPtr, jlong bookmarkPtr) {
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
-FPDF_BOOKMARK parent = reinterpret_cast<FPDF_BOOKMARK>(bookmarkPtr);
-FPDF_BOOKMARK bookmark = FPDFBookmark_GetNextSibling(doc->pdfDocument, parent);
-if (bookmark == NULL) {
-return NULL;
-}
-return NewLong(env, reinterpret_cast<jlong>(bookmark));
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
+    FPDF_BOOKMARK parent = reinterpret_cast<FPDF_BOOKMARK>(bookmarkPtr);
+    FPDF_BOOKMARK bookmark = FPDFBookmark_GetNextSibling(doc->pdfDocument, parent);
+    if (bookmark == NULL) {
+        return NULL;
+    }
+    return NewLong(env, reinterpret_cast<jlong>(bookmark));
 }
 
 JNI_FUNC(jstring, PdfiumCore, nativeGetBookmarkTitle)(JNI_ARGS, jlong bookmarkPtr) {
-FPDF_BOOKMARK bookmark = reinterpret_cast<FPDF_BOOKMARK>(bookmarkPtr);
-size_t bufferLen = FPDFBookmark_GetTitle(bookmark, NULL, 0);
-if (bufferLen <= 2) {
-return env->NewStringUTF("");
-}
-std::wstring title;
-FPDFBookmark_GetTitle(bookmark, WriteInto(&title, bufferLen + 1), bufferLen);
-return env->NewString((jchar*) title.c_str(), bufferLen / 2 - 1);
+    FPDF_BOOKMARK bookmark = reinterpret_cast<FPDF_BOOKMARK>(bookmarkPtr);
+    size_t bufferLen = FPDFBookmark_GetTitle(bookmark, NULL, 0);
+    if (bufferLen <= 2) {
+        return env->NewStringUTF("");
+    }
+    std::wstring title;
+    FPDFBookmark_GetTitle(bookmark, WriteInto(&title, bufferLen + 1), bufferLen);
+    return env->NewString((jchar*) title.c_str(), bufferLen / 2 - 1);
 }
 
 JNI_FUNC(jlong, PdfiumCore, nativeGetBookmarkDestIndex)(JNI_ARGS, jlong docPtr, jlong bookmarkPtr) {
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
-FPDF_BOOKMARK bookmark = reinterpret_cast<FPDF_BOOKMARK>(bookmarkPtr);
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
+    FPDF_BOOKMARK bookmark = reinterpret_cast<FPDF_BOOKMARK>(bookmarkPtr);
 
-FPDF_DEST dest = FPDFBookmark_GetDest(doc->pdfDocument, bookmark);
-if (dest == NULL) {
-return -1;
-}
-return (jlong) FPDFDest_GetPageIndex(doc->pdfDocument, dest);
+    FPDF_DEST dest = FPDFBookmark_GetDest(doc->pdfDocument, bookmark);
+    if (dest == NULL) {
+        return -1;
+    }
+    return (jlong) FPDFDest_GetDestPageIndex(doc->pdfDocument, dest);
 }
 
 JNI_FUNC(jlongArray, PdfiumCore, nativeGetPageLinks)(JNI_ARGS, jlong pagePtr) {
-FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
-int pos = 0;
-std::vector<jlong> links;
-FPDF_LINK link;
-while (FPDFLink_Enumerate(page, &pos, &link)) {
-links.push_back(reinterpret_cast<jlong>(link));
-}
+    FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
+    int pos = 0;
+    std::vector<jlong> links;
+    FPDF_LINK link;
+    while (FPDFLink_Enumerate(page, &pos, &link)) {
+        links.push_back(reinterpret_cast<jlong>(link));
+    }
 
-jlongArray result = env->NewLongArray(links.size());
-env->SetLongArrayRegion(result, 0, links.size(), &links[0]);
-return result;
+    jlongArray result = env->NewLongArray(links.size());
+    env->SetLongArrayRegion(result, 0, links.size(), &links[0]);
+    return result;
 }
 
 JNI_FUNC(jobject, PdfiumCore, nativeGetDestPageIndex)(JNI_ARGS, jlong docPtr, jlong linkPtr) {
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
-FPDF_LINK link = reinterpret_cast<FPDF_LINK>(linkPtr);
-FPDF_DEST dest = FPDFLink_GetDest(doc->pdfDocument, link);
-if (dest == NULL) {
-return NULL;
-}
-unsigned long index = FPDFDest_GetPageIndex(doc->pdfDocument, dest);
-return NewInteger(env, (jint) index);
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
+    FPDF_LINK link = reinterpret_cast<FPDF_LINK>(linkPtr);
+    FPDF_DEST dest = FPDFLink_GetDest(doc->pdfDocument, link);
+    if (dest == NULL) {
+        return NULL;
+    }
+    unsigned long index = FPDFDest_GetDestPageIndex(doc->pdfDocument, dest);
+    return NewInteger(env, (jint) index);
 }
 
 JNI_FUNC(jstring, PdfiumCore, nativeGetLinkURI)(JNI_ARGS, jlong docPtr, jlong linkPtr){
-DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
-FPDF_LINK link = reinterpret_cast<FPDF_LINK>(linkPtr);
-FPDF_ACTION action = FPDFLink_GetAction(link);
-if (action == NULL) {
-return NULL;
-}
-size_t bufferLen = FPDFAction_GetURIPath(doc->pdfDocument, action, NULL, 0);
-if (bufferLen <= 0) {
-return env->NewStringUTF("");
-}
-std::string uri;
-FPDFAction_GetURIPath(doc->pdfDocument, action, WriteInto(&uri, bufferLen), bufferLen);
-return env->NewStringUTF(uri.c_str());
+    DocumentFile *doc = reinterpret_cast<DocumentFile*>(docPtr);
+    FPDF_LINK link = reinterpret_cast<FPDF_LINK>(linkPtr);
+    FPDF_ACTION action = FPDFLink_GetAction(link);
+    if (action == NULL) {
+        return NULL;
+    }
+    size_t bufferLen = FPDFAction_GetURIPath(doc->pdfDocument, action, NULL, 0);
+    if (bufferLen <= 0) {
+        return env->NewStringUTF("");
+    }
+    std::string uri;
+    FPDFAction_GetURIPath(doc->pdfDocument, action, WriteInto(&uri, bufferLen), bufferLen);
+    return env->NewStringUTF(uri.c_str());
 }
 
 JNI_FUNC(jobject, PdfiumCore, nativeGetLinkRect)(JNI_ARGS, jlong linkPtr) {
-FPDF_LINK link = reinterpret_cast<FPDF_LINK>(linkPtr);
-FS_RECTF fsRectF;
-FPDF_BOOL result = FPDFLink_GetAnnotRect(link, &fsRectF);
+    FPDF_LINK link = reinterpret_cast<FPDF_LINK>(linkPtr);
+    FS_RECTF fsRectF;
+    FPDF_BOOL result = FPDFLink_GetAnnotRect(link, &fsRectF);
 
-if (!result) {
-return NULL;
-}
+    if (!result) {
+        return NULL;
+    }
 
-jclass clazz = env->FindClass("android/graphics/RectF");
-jmethodID constructorID = env->GetMethodID(clazz, "<init>", "(FFFF)V");
-return env->NewObject(clazz, constructorID, fsRectF.left, fsRectF.top, fsRectF.right, fsRectF.bottom);
+    jclass clazz = env->FindClass("android/graphics/RectF");
+    jmethodID constructorID = env->GetMethodID(clazz, "<init>", "(FFFF)V");
+    return env->NewObject(clazz, constructorID, fsRectF.left, fsRectF.top, fsRectF.right, fsRectF.bottom);
 }
 
 JNI_FUNC(jobject, PdfiumCore, nativePageCoordsToDevice)(JNI_ARGS, jlong pagePtr, jint startX, jint startY, jint sizeX,
-jint sizeY, jint rotate, jdouble pageX, jdouble pageY) {
-FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
-int deviceX, deviceY;
+                                            jint sizeY, jint rotate, jdouble pageX, jdouble pageY) {
+    FPDF_PAGE page = reinterpret_cast<FPDF_PAGE>(pagePtr);
+    int deviceX, deviceY;
 
-FPDF_PageToDevice(page, startX, startY, sizeX, sizeY, rotate, pageX, pageY, &deviceX, &deviceY);
+    FPDF_PageToDevice(page, startX, startY, sizeX, sizeY, rotate, pageX, pageY, &deviceX, &deviceY);
 
-jclass clazz = env->FindClass("android/graphics/Point");
-jmethodID constructorID = env->GetMethodID(clazz, "<init>", "(II)V");
-return env->NewObject(clazz, constructorID, deviceX, deviceY);
+    jclass clazz = env->FindClass("android/graphics/Point");
+    jmethodID constructorID = env->GetMethodID(clazz, "<init>", "(II)V");
+    return env->NewObject(clazz, constructorID, deviceX, deviceY);
 }
 
 }//extern C

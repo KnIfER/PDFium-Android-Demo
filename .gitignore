@@ -10,6 +10,8 @@ out
 gen-external-apklibs/
 classes/
 
+PDFIUM_A7
+
 # Local configuration file (sdk path, etc)
 local.properties
 
