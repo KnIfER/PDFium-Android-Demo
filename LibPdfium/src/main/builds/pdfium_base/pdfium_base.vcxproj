@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\address_space_randomization.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\oom.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\oom_callback.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator_constants.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator_internal.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator_internals_posix.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator_internals_win.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_alloc.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_alloc_constants.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_bucket.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_cookie.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_direct_map_extent.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_freelist_entry.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_oom.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_page.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_root_base.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\random.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\spin_lock.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\base_export.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\bits.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\compiler_specific.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\debug\alias.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\logging.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\no_destructor.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_conversions.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_conversions_arm_impl.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_conversions_impl.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_math.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_math_impl.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\optional.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\ptr_util.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\span.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\stl_util.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\sys_byteorder.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\template_util.h" />
+    <ClInclude Include="..\..\pdfium\third_party\base\win\win_util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\address_space_randomization.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\oom_callback.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_alloc.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_bucket.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_oom.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_page.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_root_base.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\random.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\spin_lock.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\debug\alias.cc" />
+    <ClCompile Include="..\..\pdfium\third_party\base\win\win_util.cc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{E50CC80B-9835-4C75-8EBF-8DFAD95F60CC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>icu</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>OPJ_STATIC;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <DiagnosticsFormat>Classic</DiagnosticsFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <LanguageStandard />
+      <PrecompiledHeaderFile />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration />
+      <AdditionalLibraryDirectories>..\..\pdfium\bin\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>OPJ_STATIC;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>OPJ_STATIC;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

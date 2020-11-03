@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_actionhandler.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_annot.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_annothandlermgr.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_annotiteration.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_annotiterator.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_appstream.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_baannot.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_baannothandler.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_customaccess.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_fieldaction.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_filewriteadapter.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_formfillenvironment.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_helpers.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_interactiveform.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_pageview.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_pauseadapter.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_renderpage.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_widget.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_widgethandler.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_button.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_checkbox.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_combobox.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_formfiller.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_interactiveformfiller.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_listbox.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_pushbutton.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_radiobutton.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_textfield.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_textobject.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_annot.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_attachment.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_catalog.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_dataavail.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_doc.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_editimg.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_editpage.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_editpath.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_edittext.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_ext.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_flatten.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_formfill.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_javascript.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_ppo.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_progressive.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_save.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_searchex.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_structtree.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_sysfontinfo.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_text.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_thumbnail.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_transformpage.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_view.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_button.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_caret.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_combo_box.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit_ctrl.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit_impl.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_icon.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_list_box.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_list_impl.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_scroll_bar.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_special_button.cpp" />
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_wnd.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_actionhandler.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_annot.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_annothandlermgr.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_annotiteration.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_annotiterator.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_appstream.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_baannot.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_baannothandler.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_customaccess.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_fieldaction.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_filewriteadapter.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_formfillenvironment.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_helpers.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_interactiveform.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_pageview.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_pauseadapter.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_renderpage.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_widget.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_widgethandler.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_button.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_checkbox.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_combobox.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_formfiller.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_interactiveformfiller.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_listbox.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_pushbutton.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_radiobutton.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_textfield.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_textobject.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\ipdfsdk_annothandler.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_button.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_caret.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_combo_box.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit_ctrl.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit_impl.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_icon.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_list_box.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_list_impl.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_scroll_bar.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_special_button.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_wnd.h" />
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\ipwl_systemhandler.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{128A57CE-C4F0-4E96-8F7B-B2AD59C69C79}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>icu</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>COMPONENT_BUILD;FPDF_IMPLEMENTATION;FPDFSDK_EXPORTS;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <DiagnosticsFormat>Classic</DiagnosticsFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <LanguageStandard />
+      <PrecompiledHeaderFile />
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)build\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libjpeg_turbo.lib;icu.lib;pdfium_lib.lib;fxcodec.lib;zlib.lib;freetype.lib;pdfium_base.lib;agg23.lib;libopenjpeg20.lib;lcms.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration />
+      <AdditionalLibraryDirectories>../../x64\Release;..\..\pdfium\bin\x64;.\pdfium\bin\x64icu.lib;pdfium_lib.lib;zlib.lib;freetype.lib;pdfium_base.lib;agg23.lib;libopenjpeg20.lib;lcms.lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>icu.lib;pdfium_lib.lib;zlib.lib;freetype.lib;pdfium_base.lib;agg23.lib;libopenjpeg20.lib;lcms.lib</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>COMPONENT_BUILD;FPDF_IMPLEMENTATION;FPDFSDK_EXPORTS;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libjpeg.lib;icu.lib;pdfium_lib.lib;fxcodec.lib;zlib.lib;freetype.lib;pdfium_base.lib;agg23.lib;libopenjpeg20.lib;lcms.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutputPath)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>COMPONENT_BUILD;FPDF_IMPLEMENTATION;FPDFSDK_EXPORTS;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libjpeg_turbo.lib;icu.lib;pdfium_lib.lib;fxcodec.lib;zlib.lib;freetype.lib;pdfium_base.lib;agg23.lib;libopenjpeg20.lib;lcms.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)build\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>COMPONENT_BUILD;FPDF_IMPLEMENTATION;FPDFSDK_EXPORTS;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libjpeg.lib;icu.lib;pdfium_lib.lib;fxcodec.lib;zlib.lib;freetype.lib;pdfium_base.lib;agg23.lib;libopenjpeg20.lib;lcms.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutputPath)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

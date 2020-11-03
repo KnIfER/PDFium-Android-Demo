@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\autofit\autofit.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftbase.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftbbox.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftbitmap.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftdebug.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftglyph.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftinit.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftmm.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftsystem.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\cff\cff.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\cff\cffobjs.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\cid\type1cid.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\psaux\psaux.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\pshinter\pshinter.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\psnames\psmodule.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\raster\raster.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\sfnt\sfnt.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\smooth\smooth.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\truetype\truetype.c" />
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\type1\type1.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\include\freetype\config\ftoption.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\include\pstables.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\config\ftheader.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\freetype.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftadvanc.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftbbox.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftbdf.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftbitmap.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftbzip2.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftcache.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftchapters.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftcid.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftcolor.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftdriver.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\fterrdef.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\fterrors.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftfntfmt.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftgasp.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftglyph.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftgxval.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftgzip.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftimage.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftincrem.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftlcdfil.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftlist.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftlzw.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftmac.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftmm.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftmodapi.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftmoderr.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftotval.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftoutln.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftparams.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftpfr.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftrender.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftsizes.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftsnames.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftstroke.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftsynth.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftsystem.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\fttrigon.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\fttypes.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftwinfnt.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\autohint.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\cffotypes.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\cfftypes.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftcalc.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftdebug.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftdrv.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftgloadr.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\fthash.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftmemory.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftobjs.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftpsprop.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftrfork.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftserv.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftstream.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\fttrace.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftvalid.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\internal.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\psaux.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\pshints.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svbdf.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svcfftl.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svcid.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svfntfmt.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svgldict.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svgxval.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svkern.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svmetric.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svmm.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svotval.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svpfr.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svpostnm.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svprop.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svpscmap.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svpsinfo.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svsfnt.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svttcmap.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svtteng.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svttglyf.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svwinfnt.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\sfnt.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\t1types.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\tttypes.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\t1tables.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ttnameid.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\tttables.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\tttags.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\ft2build.h" />
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\src\base\ftbase.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{2DA7B2C8-50A1-496D-AC44-CDDD534D6378}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>icu</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>FT2_BUILD_LIBRARY;OPJ_STATIC;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <DiagnosticsFormat>Classic</DiagnosticsFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <LanguageStandard />
+      <PrecompiledHeaderFile />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration />
+      <AdditionalLibraryDirectories>..\..\pdfium\bin\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>OPJ_STATIC;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>OPJ_STATIC;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;WIN32_LEAN_AND_MEAN;U_I18N_IMPLEMENTATION;U_ICUDATAENTRY_IN_COMMON;U_COMMON_IMPLEMENTATION;U_STATIC_IMPLEMENTATION;FT2_BUILD_LIBRARY;NOMINMAX;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

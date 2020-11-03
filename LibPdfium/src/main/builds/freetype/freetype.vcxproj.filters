@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\autofit\autofit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\cff\cff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftbase.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftbbox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftbitmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftdebug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftglyph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftsystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\psaux\psaux.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\pshinter\pshinter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\psnames\psmodule.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\raster\raster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\sfnt\sfnt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\smooth\smooth.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\truetype\truetype.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\type1\type1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\cid\type1cid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\cff\cffobjs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\autohint.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\cffotypes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\cfftypes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\freetype.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\ft2build.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftadvanc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\src\base\ftbase.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftbbox.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftbdf.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftbitmap.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftbzip2.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftcache.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftcalc.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftchapters.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftcid.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftcolor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\config\ftconfig.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftdebug.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftdriver.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftdrv.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\fterrdef.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\fterrors.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftfntfmt.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftgasp.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftgloadr.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftglyph.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftgxval.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftgzip.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\fthash.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\config\ftheader.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftimage.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftincrem.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftlcdfil.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftlist.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftlzw.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftmac.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftmemory.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftmm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftmodapi.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftmoderr.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftobjs.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftotval.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftoutln.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftparams.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftpfr.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftpsprop.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftrender.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftrfork.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftserv.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftsizes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftsnames.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\config\ftstdlib.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftstream.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftstroke.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftsynth.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftsystem.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\fttrace.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\fttrigon.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\fttypes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\ftvalid.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ftwinfnt.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\internal.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\psaux.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\pshints.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\include\pstables.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\sfnt.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svbdf.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svcfftl.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svcid.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svfntfmt.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svgldict.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svgxval.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svkern.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svmetric.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svmm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svotval.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svpfr.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svpostnm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svprop.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svpscmap.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svpsinfo.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svsfnt.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svttcmap.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svtteng.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svttglyf.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\services\svwinfnt.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\t1tables.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\t1types.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\ttnameid.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\tttables.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\tttags.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\include\freetype\internal\tttypes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\include\freetype\config\ftoption.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\include\freetype\config\ftmodule.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

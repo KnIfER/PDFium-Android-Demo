@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\allocator">
+      <UniqueIdentifier>{cab2e3cc-48db-493f-b144-5390b0e60248}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\debug">
+      <UniqueIdentifier>{01270a37-630f-4d40-9f8e-05b94438d7a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\numerics">
+      <UniqueIdentifier>{d3ebd7ec-9ade-470b-82b9-5d9a9496f94a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\win">
+      <UniqueIdentifier>{f52fb76b-54c3-47bc-a49d-e314878dcb27}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pdfium\third_party\base\win\win_util.h">
+      <Filter>Source Files\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_math_impl.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_conversions.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_conversions_impl.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_math.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\debug\alias.h">
+      <Filter>Source Files\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\ptr_util.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\span.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\stl_util.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\sys_byteorder.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\template_util.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\base_export.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\bits.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\compiler_specific.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\logging.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\no_destructor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\optional.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\numerics\safe_conversions_arm_impl.h">
+      <Filter>Source Files\numerics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\oom_callback.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator_constants.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator_internal.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator_internals_posix.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator_internals_win.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_alloc.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_alloc_constants.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_bucket.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_cookie.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_direct_map_extent.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_freelist_entry.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_oom.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_page.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_root_base.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\random.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\spin_lock.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\address_space_randomization.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\base\allocator\partition_allocator\oom.h">
+      <Filter>Source Files\allocator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\third_party\base\win\win_util.cc">
+      <Filter>Source Files\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\debug\alias.cc">
+      <Filter>Source Files\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\page_allocator.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_alloc.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_bucket.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_oom.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_page.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\partition_root_base.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\random.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\spin_lock.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\address_space_randomization.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\base\allocator\partition_allocator\oom_callback.cc">
+      <Filter>Source Files\allocator</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

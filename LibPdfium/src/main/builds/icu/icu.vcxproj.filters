@@ -1,0 +1,2154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{2b2aab1c-0a77-4648-a249-16754db17fea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\i18n">
+      <UniqueIdentifier>{b99f9700-0dca-493a-b8ab-29a3cb2e8e0e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\cpputils.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\cstr.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\cstring.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\cwchar.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\dictbe.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\dictionarydata.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\hash.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\icuplugimp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\localeprioritylist.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\localsvc.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\locbased.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\locdistance.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\loclikelysubtags.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\locmap.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\locutil.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\lsr.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\messageimpl.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\msvcres.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\mutex.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\norm2_nfc_data.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\norm2allmodes.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\normalizer2impl.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\patternprops.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\pluralmap.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\propname.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\propname_data.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\propsvec.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\punycode.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\putilimp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\rbbi_cache.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\rbbidata.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\rbbinode.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\rbbirb.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\rbbirpt.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\rbbiscan.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\rbbisetb.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\rbbitblb.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\resource.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\restrace.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ruleiter.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\serv.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\servloc.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\servnotf.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\sharedobject.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\sprpimpl.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\static_unicode_sets.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uarrsort.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uassert.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ubidi_props.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ubidi_props_data.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ubidiimp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ubrkimpl.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucase.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucase_props_data.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucasemap_imp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uchar_props_data.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucln.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucln_cmn.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucln_imp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucmndata.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucnv_bld.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucnv_cnv.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucnv_ext.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucnv_imp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucnv_io.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucnvmbcs.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucol_data.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucol_swp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucptrie_impl.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ucurrimp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\udatamem.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\udataswp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uelement.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uenumimp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uhash.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uinvchar.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ulayout_props.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ulist.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ulocimp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\umapfile.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\umutex.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\unifiedcache.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\unisetspan.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\unistrappender.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\unormimp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uposixdefs.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uprops.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uresdata.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uresimp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ureslocs.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\usc_impl.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uset_imp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ustr_cnv.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ustr_imp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ustrenum.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\ustrfmt.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\util.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\utracimp.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\utrie.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\utrie2.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\utrie2_impl.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\utypeinfo.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uvector.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uvectr32.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\uvectr64.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\wintz.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\bmpset.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\brkeng.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\bytesinkutil.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\capi_helper.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\charstr.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\common\cmemory.h">
+      <Filter>Source Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\anytrans.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\astro.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\bocsu.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\brktrans.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\buddhcal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\casetrn.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\cecal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\chnsecal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collation.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationbuilder.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationcompare.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationdata.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationdatabuilder.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationdatareader.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationdatawriter.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationfastlatin.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationfastlatinbuilder.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationfcd.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationiterator.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationkeys.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationroot.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationrootelements.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationruleparser.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationsets.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationsettings.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationtailoring.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collationweights.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\collunsafe.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\coptccal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\cpdtrans.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\csdetect.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\csmatch.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\csr2022.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\csrecog.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\csrmbcs.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\csrsbcs.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\csrucode.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\csrutf8.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\currfmt.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\dangical.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\dayperiodrules.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\decContext.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\decNumber.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\decNumberLocal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-bignum.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-bignum-dtoa.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-cached-powers.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-diy-fp.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-double-to-string.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-fast-dtoa.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-ieee.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-string-to-double.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-strtod.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-utils.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\dt_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\dtitv_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\dtptngen_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\erarules.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\esctrn.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\ethpccal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\fmtableimp.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\formatted_string_builder.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\formattedval_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\fphdlimp.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\funcrepl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\gregoimp.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\hebrwcal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\indiancal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\inputext.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\islamcal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\japancal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\msgfmt_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\name2uni.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\nfrlist.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\nfrs.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\nfrule.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\nfsubs.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\nortrans.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\nultrans.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_affixutils.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_asformat.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_compact.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_currencysymbols.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_decimalquantity.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_decimfmtprops.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_decnum.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_formatimpl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_longnames.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_mapper.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_microprops.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_modifiers.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_multiplier.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_patternmodifier.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_patternstring.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_roundingutils.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_scientific.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_skeletons.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_types.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_utils.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\number_utypes.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_affixes.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_compositions.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_currency.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_decimal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_scientific.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_symbols.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_types.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_utils.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numparse_validators.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numrange_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\numsys_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\olsontz.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\persncal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\plurrule_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\quant.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\quantityformatter.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\rbt.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\rbt_data.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\rbt_pars.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\rbt_rule.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\rbt_set.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\regexcmp.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\regexcst.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\regeximp.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\regexst.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\regextxt.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\region_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\reldtfmt.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\remtrans.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\scriptset.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\selfmtimpl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\sharedbreakiterator.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\sharedcalendar.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\shareddateformatsymbols.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\sharednumberformat.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\sharedpluralrules.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\smpdtfst.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\standardplural.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\string_segment.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\strmatch.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\strrepl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\taiwncal.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\titletrn.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\tolowtrn.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\toupptrn.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\transreg.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\tridpars.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\tzgnames.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\tznames_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\ucln_in.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\ucol_imp.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\uitercollationiterator.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\umsg_imp.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\unesctrn.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\uni2name.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\uspoof_conf.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\uspoof_impl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\usrchimp.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\utf8collationiterator.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\utf16collationiterator.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\vzone.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\windtfmt.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\winnmfmt.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\wintzimpl.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\zonemeta.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\zrule.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\icu\source\i18n\ztrans.h">
+      <Filter>Source Files\i18n</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\appendable.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\bmpset.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\brkeng.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\brkiter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\bytesinkutil.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\bytestream.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\bytestrie.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\bytestriebuilder.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\bytestrieiterator.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\caniter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\characterproperties.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\chariter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\charstr.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\cmemory.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\cstr.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\cstring.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\cwchar.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\dictbe.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\dictionarydata.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\dtintrv.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\edits.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\errorcode.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\filteredbrk.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\filterednormalizer2.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\icudataver.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\icuplug.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\loadednormalizer2impl.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\localebuilder.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\localematcher.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\localeprioritylist.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\locavailable.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\locbased.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\locdispnames.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\locdistance.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\locdspnm.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\locid.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\loclikely.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\loclikelysubtags.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\locmap.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\locresdata.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\locutil.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\lsr.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\messagepattern.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\normalizer2.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\normalizer2impl.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\normlzr.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\parsepos.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\patternprops.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\pluralmap.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\propname.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\propsvec.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\punycode.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\putil.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\rbbi.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\rbbi_cache.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\rbbidata.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\rbbinode.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\rbbirb.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\rbbiscan.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\rbbisetb.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\rbbistbl.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\rbbitblb.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\resbund.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\resbund_cnv.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\resource.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\restrace.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ruleiter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\schriter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\serv.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\servlk.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\servlkf.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\servls.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\servnotf.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\servrbf.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\servslkf.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\sharedobject.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\simpleformatter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\static_unicode_sets.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\stringpiece.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\stringtriebuilder.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uarrsort.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ubidi.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ubidi_props.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ubidiln.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ubiditransform.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ubidiwrt.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ubrk.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucase.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucasemap.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucasemap_titlecase_brkiter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucat.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uchar.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucharstrie.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucharstriebuilder.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucharstrieiterator.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uchriter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucln_cmn.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucmndata.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_bld.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_cb.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_cnv.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_ct.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_err.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_ext.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_io.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_lmb.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_set.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_u7.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_u8.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_u16.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv_u32.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnv2022.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnvbocu.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnvdisp.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnvhz.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnvisci.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnvlat1.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnvmbcs.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnvscsu.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucnvsel.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucol_swp.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucptrie.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ucurr.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\udata.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\udatamem.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\udataswp.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uenum.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uhash.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uhash_us.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uidna.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uinit.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uinvchar.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uiter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ulist.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uloc.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uloc_keytype.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uloc_tag.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\umapfile.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\umath.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\umutablecptrie.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\umutex.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unames.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unifiedcache.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unifilt.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unifunct.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uniset.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uniset_closure.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uniset_props.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unisetspan.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unistr.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unistr_case.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unistr_case_locale.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unistr_cnv.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unistr_props.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unistr_titlecase_brkiter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unorm.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\unormcmp.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uobject.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uprops.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ures_cnv.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uresbund.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uresdata.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\usc_impl.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uscript.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uscript_props.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uset.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uset_props.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\usetiter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ushape.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\usprep.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustack.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustr_cnv.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustr_titlecase_brkiter.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustr_wcs.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustrcase.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustrcase_locale.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustrenum.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustrfmt.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustring.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\ustrtrns.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\utext.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\utf_impl.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\util.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\util_props.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\utrace.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\utrie.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\utrie_swap.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\utrie2.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\utrie2_builder.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uts46.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\utypes.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uvector.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uvectr32.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\uvectr64.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\common\wintz.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ztrans.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\alphaindex.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\anytrans.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\astro.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\basictz.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\bocsu.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\brktrans.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\buddhcal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\calendar.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\casetrn.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\cecal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\chnsecal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\choicfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\coleitr.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\coll.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collation.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationbuilder.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationcompare.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationdata.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationdatabuilder.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationdatareader.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationdatawriter.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationfastlatin.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationfastlatinbuilder.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationfcd.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationiterator.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationkeys.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationroot.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationrootelements.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationruleparser.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationsets.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationsettings.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationtailoring.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\collationweights.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\compactdecimalformat.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\coptccal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\cpdtrans.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\csdetect.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\csmatch.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\csr2022.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\csrecog.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\csrmbcs.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\csrsbcs.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\csrucode.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\csrutf8.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\curramt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\currfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\currpinf.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\currunit.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\dangical.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\datefmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\dayperiodrules.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\dcfmtsym.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\decContext.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\decimfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\decNumber.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-bignum.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-bignum-dtoa.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-cached-powers.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-double-to-string.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-fast-dtoa.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-string-to-double.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\double-conversion-strtod.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\dtfmtsym.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\dtitvfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\dtitvinf.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\dtptngen.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\dtrule.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\erarules.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\esctrn.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ethpccal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\fmtable.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\fmtable_cnv.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\format.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\formatted_string_builder.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\formattedval_iterimpl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\formattedval_sbimpl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\formattedvalue.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\fphdlimp.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\fpositer.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\funcrepl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\gender.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\gregocal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\gregoimp.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\hebrwcal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\indiancal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\inputext.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\islamcal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\japancal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\listformatter.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\measfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\measunit.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\measure.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\msgfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\name2uni.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\nfrs.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\nfrule.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\nfsubs.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\nortrans.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\nounit.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\nultrans.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_affixutils.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_asformat.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_capi.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_compact.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_currencysymbols.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_decimalquantity.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_decimfmtprops.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_fluent.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_formatimpl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_grouping.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_integerwidth.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_longnames.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_mapper.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_modifiers.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_multiplier.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_notation.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_output.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_padding.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_patternmodifier.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_patternstring.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_rounding.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_scientific.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_skeletons.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\number_utils.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numparse_affixes.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numparse_compositions.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numparse_currency.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numparse_decimal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numparse_impl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numparse_parsednumber.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numparse_scientific.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numparse_symbols.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numparse_validators.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numrange_fluent.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numrange_impl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\numsys.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\olsontz.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\persncal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\plurfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\plurrule.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\quant.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\quantityformatter.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\rbnf.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\rbt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\rbt_data.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\rbt_pars.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\rbt_rule.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\rbt_set.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\rbtz.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\regexcmp.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\regeximp.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\regexst.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\regextxt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\region.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\reldatefmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\reldtfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\rematch.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\remtrans.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\repattrn.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\rulebasedcollator.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\scientificnumberformatter.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\scriptset.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\search.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\selfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\sharedbreakiterator.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\simpletz.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\smpdtfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\smpdtfst.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\sortkey.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\standardplural.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\string_segment.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\strmatch.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\strrepl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\stsearch.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\taiwncal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\timezone.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\titletrn.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tmunit.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tmutamt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tmutfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tolowtrn.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\toupptrn.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\translit.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\transreg.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tridpars.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tzfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tzgnames.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tznames.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tznames_impl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tzrule.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\tztrans.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ucal.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ucln_in.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ucol.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ucol_res.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ucol_sit.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ucoleitr.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ucsdet.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\udat.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\udateintervalformat.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\udatpg.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ufieldpositer.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\uitercollationiterator.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ulistformatter.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\ulocdata.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\umsg.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\unesctrn.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\uni2name.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\unum.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\unumsys.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\upluralrules.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\uregex.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\uregexc.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\uregion.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\usearch.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\uspoof.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\uspoof_build.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\uspoof_conf.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\uspoof_impl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\utf8collationiterator.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\utf16collationiterator.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\utmscale.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\utrans.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\vtzone.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\vzone.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\windtfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\winnmfmt.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\wintzimpl.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\zonemeta.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\icu\source\i18n\zrule.cpp">
+      <Filter>Source Files\i18n</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

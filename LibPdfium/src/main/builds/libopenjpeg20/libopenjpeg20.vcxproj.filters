@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\libopenjpeg20">
+      <UniqueIdentifier>{badd36b7-fb06-48fe-aa5c-37bd1ec64e97}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\bio.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\cio.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\dwt.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\event.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\function_list.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\image.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\invert.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\j2k.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\jp2.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\mct.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\mqc.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\openjpeg.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\opj_clock.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\pi.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\sparse_array.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\t1.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\t2.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\tcd.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\tgt.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libopenjpeg20\thread.c">
+      <Filter>Source Files\libopenjpeg20</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
