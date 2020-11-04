@@ -38,6 +38,6 @@ libpdfiumagg23.a: $(OBJS_pdfiumagg23)
 build/$(_ARCH_PX_)/pdfiumagg23/%.o: %
 	@echo $<; set -x;\
 	mkdir -p $(dir $@);\
-	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES) $(LOCAL_CFLAGS) $(PWDX)
+	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES) $(LOCAL_CFLAGS)
 	@echo ""
 	@echo ""
