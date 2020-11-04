@@ -6,7 +6,7 @@ Using submodule [LibPDFium](https://github.com/KnIfER/LibPDFium).
 git clone --recursive --depth=1 https://github.com/KnIfER/PDFium-Android-Demo.git
 ```
 
-Pdfium source codes are pulled from AOSP/android11-mainline-release
+Pdfium source codes (LibPdfium/src/main/PDFIUM) are pulled from AOSP/android11-mainline-release
 
 Special Thanks:
 - `bash-ndk *.mk` buildscripts via [barteksc/modpdfium](https://github.com/barteksc/modpdfium)
