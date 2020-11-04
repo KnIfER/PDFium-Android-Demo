@@ -132,7 +132,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>pdfium;pdfium\third_party\zlib;pdfium\third_party\libjpeg_turbo;pdfium\third_party\freetype\include;pdfium;pdfium\third_party\freetype\src\include;pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>
@@ -205,7 +205,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>..\..\pdfium;..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>pdfium;pdfium\third_party\zlib;pdfium\third_party\libjpeg_turbo;pdfium\third_party\freetype\include;pdfium;pdfium\third_party\freetype\src\include;pdfium\third_party\icu\source\common</AdditionalIncludeDirectories>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <AdditionalOptions>/utf-8 /wd4244 /wd4996 /wd4267 </AdditionalOptions>

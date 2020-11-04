@@ -181,7 +181,7 @@
     </Link>
     <Lib>
       <LinkTimeCodeGeneration />
-      <AdditionalLibraryDirectories>..\..\pdfium\bin\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\build\x64\Release</AdditionalLibraryDirectories>
       <AdditionalDependencies>
       </AdditionalDependencies>
     </Lib>

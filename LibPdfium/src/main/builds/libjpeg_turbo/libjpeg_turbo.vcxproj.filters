@@ -171,6 +171,9 @@
     <ClCompile Include="..\..\PDFIUM\third_party\libjpeg_turbo\simd\i386\jsimd.c">
       <Filter>Source Files\simd_x86</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jsimd.c">
+      <Filter>Source Files\simd</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\pdfium\third_party\libjpeg_turbo\jversion.h">
@@ -193,24 +196,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jccolor-avx2.asm">
-      <Filter>Source Files\simd</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jccolor-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcgray-avx2.asm">
-      <Filter>Source Files\simd</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcgray-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jchuff-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcphuff-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </CustomBuild>
     <CustomBuild Include="..\..\PDFIUM\third_party\libjpeg_turbo\simd\i386\jsimdcpu.asm">
       <Filter>Source Files\simd_x86</Filter>
     </CustomBuild>
@@ -343,73 +328,86 @@
     <CustomBuild Include="..\..\PDFIUM\third_party\libjpeg_turbo\simd\i386\jquant-sse.asm">
       <Filter>Source Files\simd_x86</Filter>
     </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcsample-avx2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcsample-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdcolor-avx2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdcolor-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdmerge-avx2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdmerge-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdsample-avx2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdsample-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jfdctflt-sse.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jfdctfst-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jfdctint-avx2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jfdctint-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctflt-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctfst-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctint-avx2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctint-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctred-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jquantf-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jquanti-avx2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jquanti-sse2.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jsimdcpu.asm">
-      <Filter>Source Files\simd</Filter>
-    </None>
-    <None Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jsimd.c">
-      <Filter>Source Files\simd</Filter>
-    </None>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jccolor-avx2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jccolor-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcgray-avx2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcgray-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jchuff-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcphuff-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcsample-avx2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcsample-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdcolor-avx2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdcolor-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdmerge-avx2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdmerge-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdsample-avx2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jdsample-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jfdctflt-sse.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jfdctfst-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jfdctint-avx2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jfdctint-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctflt-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctfst-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctint-avx2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctint-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jidctred-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jquantf-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jquanti-avx2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jquanti-sse2.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jsimdcpu.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
