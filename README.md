@@ -1,6 +1,6 @@
 
 # Get the source code
-Using submodule [LibPDFium](https://github.com/KnIfER/LibPDFium).
+Using submodule [LibPDFium](https://github.com/KnIfER/LibPDFium), which could be compiled within 6 minutes! 
 
 ```
 git clone --recursive --depth=1 https://github.com/KnIfER/PDFium-Android-Demo.git
