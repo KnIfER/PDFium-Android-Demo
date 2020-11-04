@@ -22,18 +22,10 @@ LOCAL_SRC_FILES := \
 	pdfium/third_party/agg23/agg_vcgen_dash.cpp \
 	pdfium/third_party/agg23/agg_vcgen_stroke.cpp \
 	
-	
-PWD = $(shell pwd)
-PWDW = $(shell pwd | sed -E 's/^\/mnt\/([a-z])/\1:/g')
-	
-	
 LOCAL_C_INCLUDES := \
     -I$(PWDW)/pdfium/third_party/agg23/ \
     -I$(PWDW)/pdfium/third_party/agg23/contrib\optimizations \
     -I$(NDKW)/sources/android/cpufeatures \
-    -I$(PWD)/pdfium/third_party/agg23/ \
-    -I$(PWD)/pdfium/third_party/agg23/contrib\optimizations \
-    -I$(NDK)/sources/android/cpufeatures \
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -46,5 +38,6 @@ libpdfiumagg23.a: $(OBJS_pdfiumagg23)
 build/$(_ARCH_PX_)/pdfiumagg23/%.o: %
 	@echo $<; set -x;\
 	mkdir -p $(dir $@);\
-	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES) $(LOCAL_CFLAGS)
-	echo
+	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES) $(LOCAL_CFLAGS) $(PWDX)
+	@echo ""
+	@echo ""

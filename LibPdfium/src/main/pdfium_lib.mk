@@ -370,9 +370,6 @@ CPU_FEAT := \
     $(NDKW)/sources/android/cpufeatures/cpu-features.c
 	
 	
-PWD = $(shell pwd)
-PWDW = $(shell pwd | sed -E 's/^\/mnt\/([a-z])/\1:/g')
-	
 LIBS_C_INCLUDES := \
     -I$(PWDW)/pdfium/ \
     -I$(PWDW)/pdfium/third_party/icu/source/i18n/ \
@@ -400,4 +397,5 @@ build/$(_ARCH_PX_)/pdfium_lib/%.o: %
 	@echo $<; set -x;\
 	mkdir -p $(dir $@);\
 	$(CC)++ -c -O3 $< -o $(@) -I"../" $(LIBS_C_INCLUDES) $(LIBS_CFLAGS)
-	echo
+	@echo ""
+	@echo ""

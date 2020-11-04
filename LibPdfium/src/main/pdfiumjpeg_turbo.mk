@@ -76,10 +76,7 @@ LOCAL_SRC_FILES := \
     pdfium/third_party/libjpeg_turbo/jquant2.c \
     pdfium/third_party/libjpeg_turbo/jutils.c \
 	
-	
-PWD = $(shell pwd)
-PWDW = $(shell pwd | sed -E 's/^\/mnt\/([a-z])/\1:/g')
-	
+
 	
 LOCAL_C_INCLUDES := \
     -I$(PWDW)/pdfium/third_party/libjpeg_turbo/ \
@@ -100,4 +97,5 @@ build/$(_ARCH_PX_)/pdfiumjpeg_turbo/%.o: %
 	@echo $<; set -x;\
 	mkdir -p $(dir $@);\
 	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES) $(LOCAL_CFLAGS)
-	echo
+	@echo ""
+	@echo ""

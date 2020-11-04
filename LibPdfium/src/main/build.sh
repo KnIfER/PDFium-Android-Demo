@@ -4,7 +4,6 @@ export PATH=$ANDROID_SDK/tools:$PATH
 
 export NDK=/mnt/d/Code/NVPACK/android-ndk-r21b
 export NDK=/mnt/d/Code/NVPACK/android_sdk/ndk/21.0.6113669
-export NDKW=d:/Code/NVPACK/android_sdk/ndk/21.0.6113669
 
 export PATH=$NDK:$PATH
 
@@ -16,5 +15,9 @@ export SYSROOTW=$NDKW/toolchains/llvm/prebuilt/windows-x86_64/sysroot
 
 export AR=$TOOLCHAIN/bin/aarch64-linux-android-ar.exe
 
+export WIN=1
+export NDKW=$NDK
+export PWDW=$PWD
+export SYSROOTW=$SYSROOT
 
-make all
+make -j3 all

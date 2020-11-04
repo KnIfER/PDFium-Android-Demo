@@ -46,11 +46,7 @@ LOCAL_SRC_FILES := \
     pdfium/core/fxcodec/scanlinedecoder.cpp \
 	
 	
-	
-PWD = $(shell pwd)
-PWDW = $(shell pwd | sed -E 's/^\/mnt\/([a-z])/\1:/g')
-	
-	
+
 LOCAL_C_INCLUDES := \
     -I$(PWDW)/pdfium/ \
     -I$(PWDW)/pdfium/third_party/icu/source/i18n/ \
@@ -68,4 +64,5 @@ build/$(_ARCH_PX_)/pdfiumfxcodec/%.o: %
 	@echo $<; set -x;\
 	mkdir -p $(dir $@);\
 	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES) $(LOCAL_CFLAGS)
-	echo
+	@echo ""
+	@echo ""

@@ -455,17 +455,11 @@ LOCAL_SRC_FILES := \
 	pdfium/third_party/icu/source/stubdata/stubdata.cpp
 	
 	
-PWD = $(shell pwd)
-PWDW = $(shell pwd | sed -E 's/^\/mnt\/([a-z])/\1:/g')
-	
 	
 ICU_C_INCLUDES := \
     -I$(PWDW)/pdfium/ \
     -I$(PWDW)/pdfium/third_party/icu/source/i18n/ \
     -I$(PWDW)/pdfium/third_party/icu/source/common/ \
-    -I$(PWD)/pdfium/ \
-    -I$(PWD)/pdfium/third_party/icu/source/i18n/ \
-    -I$(PWD)/pdfium/third_party/icu/source/common/ \
 	
 	
 include $(BUILD_STATIC_LIBRARY)
@@ -484,4 +478,5 @@ build/$(_ARCH_PX_)/pdfiumicu/%.o:%
 	@echo $<; set -x;\
 	mkdir -p $(dir $@);\
 	$(CC) -c -O3 $< -o $(@) -I"../" $(ICU_C_INCLUDES) $(ICU_CFLAGS)
-	echo
+	@echo ""
+	@echo ""

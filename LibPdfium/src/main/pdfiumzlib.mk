@@ -42,17 +42,11 @@ LOCAL_SRC_FILES := \
 	pdfium/third_party/zlib/simd_stub.c \
 	
 	
-PWD = $(shell pwd)
-PWDW = $(shell pwd | sed -E 's/^\/mnt\/([a-z])/\1:/g')
-	
 	
 ZLIB_C_INCLUDES := \
     -I$(PWDW)/pdfium/third_party/zlib/ \
     -I$(PWDW)/pdfium/third_party/zlib/contrib\optimizations \
     -I$(NDKW)/sources/android/cpufeatures \
-    -I$(PWD)/pdfium/third_party/zlib/ \
-    -I$(PWD)/pdfium/third_party/zlib/contrib\optimizations \
-    -I$(NDK)/sources/android/cpufeatures \
 
 include $(BUILD_STATIC_LIBRARY)
 
@@ -66,4 +60,5 @@ build/$(_ARCH_PX_)/pdfiumzlib/%.o: %
 	@echo $<; set -x;\
 	mkdir -p $(dir $@);\
 	$(CC) -c -O3 $< -o $(@) -I"../" $(ZLIB_C_INCLUDES) $(LOCAL_CFLAGS)
-	echo
+	@echo ""
+	@echo ""

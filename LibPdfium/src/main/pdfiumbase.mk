@@ -27,13 +27,10 @@ LOCAL_SRC_FILES := \
     pdfium/third_party/base/allocator/partition_allocator/spin_lock.cc \
     pdfium/third_party/base/debug/alias.cc \
 	
-PWD = $(shell pwd)
-PWDW = $(shell pwd | sed -E 's/^\/mnt\/([a-z])/\1:/g')
-	
+
 	
 LOCAL_C_INCLUDES := \
     -I$(PWDW)/pdfium/ \
-    -I$(PWD)/pdfium/ \
 
 
 include $(BUILD_STATIC_LIBRARY)
@@ -48,4 +45,5 @@ build/$(_ARCH_PX_)/pdfiumbase/%.o: %
 	@echo $<; set -x;\
 	mkdir -p $(dir $@);\
 	$(CC) -c -O3 $< -o $(@) -I"../" $(LOCAL_C_INCLUDES) $(LOCAL_CFLAGS)
-	echo
+	@echo ""
+	@echo ""

@@ -1,0 +1,1 @@
+Prebuilt `libpdfium.so` or `libpdfium.cr.so` go here to be linked against yielding the jni layer `libpdfium-lib.so`.

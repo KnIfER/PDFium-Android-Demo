@@ -9,12 +9,15 @@ CC := $(TOOLCHAIN)/bin/$(_ARCH_CC_)
 
 AR := $(TOOLCHAIN)/bin/aarch64-linux-android-ar.exe
 
+ifeq ($(WIN), 1)
+	PWDW := $(shell echo $(PWDW) | sed -E 's/^\/mnt\/([a-z])/\1:/g')
+	NDKW := $(shell echo $(NDKW) | sed -E 's/^\/mnt\/([a-z])/\1:/g')
+	SYSROOTW := $(shell echo $(SYSROOTW) | sed -E 's/^\/mnt\/([a-z])/\1:/g')
+endif
+
 # libpdfiumjpeg.a  libpdfiumjpeg_turbo.a
 
 #  libpdfiumfxcodec.a\
-
-PWD = $(shell pwd)
-PWDW = $(shell pwd | sed -E 's/^\/mnt\/([a-z])/\1:/g')
 
 pdfium_3rd_libs = \
 	\
@@ -60,6 +63,10 @@ all: \
 	
 	# libpdfium.a
 	
-	
-	
+
+
+
+clean :
+	rm -f *.a
+	rm -rf build/aarch64
 	
