@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_actionhandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_annot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_annothandlermgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_annotiteration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_annotiterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_appstream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_baannot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_baannothandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_customaccess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_fieldaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_filewriteadapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_formfillenvironment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_interactiveform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_pageview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_pauseadapter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_renderpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_widget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\cpdfsdk_widgethandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_annot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_attachment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_catalog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_dataavail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_doc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_editimg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_editpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_editpath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_edittext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_ext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_flatten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_formfill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_javascript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_ppo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_progressive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_save.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_searchex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_structtree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_sysfontinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_thumbnail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_transformpage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\fpdf_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_button.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_checkbox.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_combobox.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_formfiller.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_interactiveformfiller.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_listbox.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_pushbutton.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_radiobutton.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_textfield.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\formfiller\cffl_textobject.cpp">
+      <Filter>Source Files\formfiller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_button.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_caret.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_combo_box.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit_ctrl.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit_impl.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_icon.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_list_box.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_list_impl.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_scroll_bar.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_special_button.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\fpdfsdk\pwl\cpwl_wnd.cpp">
+      <Filter>Source Files\pwl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_actionhandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_annot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_annothandlermgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_annotiteration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_annotiterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_appstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_baannot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_baannothandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_customaccess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_fieldaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_filewriteadapter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_formfillenvironment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_interactiveform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_pageview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_pauseadapter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_renderpage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_widget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\cpdfsdk_widgethandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_button.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_checkbox.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_combobox.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_formfiller.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_interactiveformfiller.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_listbox.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_pushbutton.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_radiobutton.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_textfield.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\formfiller\cffl_textobject.h">
+      <Filter>Header Files\formfiller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_button.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_caret.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_combo_box.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit_ctrl.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_edit_impl.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_icon.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_list_box.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_list_impl.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_scroll_bar.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_special_button.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_wnd.h">
+      <Filter>Header Files\pwl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{cbfd058b-e8f4-4225-a63b-4a1ace1e64a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header FIles">
+      <UniqueIdentifier>{a1153466-1da9-4c47-8846-f36326d5ceec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\formfiller">
+      <UniqueIdentifier>{aca9ca9f-de89-42e2-a8ca-607bacd8376f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pwl">
+      <UniqueIdentifier>{e667867c-183c-42c6-bfda-e51ee6ec04d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header FIles\pwl">
+      <UniqueIdentifier>{e3c8ab01-9d78-47a8-8ca6-6592be697180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header FIles\formfiller">
+      <UniqueIdentifier>{ae9e7d22-74f3-4fdd-bd71-5c3b0c9ad19e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

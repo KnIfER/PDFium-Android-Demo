@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\basic\basicmodule.cpp">
+      <Filter>Source Files\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\cfx_codec_memory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\fax\faxmodule.cpp">
+      <Filter>Source Files\fax</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\flate\flatemodule.cpp">
+      <Filter>Source Files\flate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\fx_codec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\icc\iccmodule.cpp">
+      <Filter>Source Files\icc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_ArithDecoder.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_ArithIntDecoder.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_BitStream.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_Context.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_DocumentContext.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_GrdProc.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_GrrdProc.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_HtrdProc.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_HuffmanDecoder.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_HuffmanTable.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_Image.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_PatternDict.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_PddProc.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_SddProc.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_Segment.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_SymbolDict.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_TrdProc.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jbig2\jbig2module.cpp">
+      <Filter>Source Files\jbig2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jpeg\jpegmodule.cpp">
+      <Filter>Source Files\jpeg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jpx\cjpx_decoder.cpp">
+      <Filter>Source Files\jpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jpx\jpx_decode_utils.cpp">
+      <Filter>Source Files\jpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\jpx\jpxmodule.cpp">
+      <Filter>Source Files\jpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\core\fxcodec\scanlinedecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\basic\basicmodule.h">
+      <Filter>Header Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\cfx_codec_memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\fax\faxmodule.h">
+      <Filter>Header Files\fax</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\flate\flatemodule.h">
+      <Filter>Header Files\flate</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\fx_codec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\icc\iccmodule.h">
+      <Filter>Header Files\icc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_ArithDecoder.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_ArithIntDecoder.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_BitStream.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_Context.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_DocumentContext.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_GrdProc.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_GrrdProc.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_HtrdProc.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_HuffmanDecoder.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_HuffmanTable.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_Image.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_PatternDict.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_PddProc.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_SddProc.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_Segment.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_SymbolDict.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\JBig2_TrdProc.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jbig2\jbig2module.h">
+      <Filter>Header Files\jbig2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jpeg\jpegmodule.h">
+      <Filter>Header Files\jpeg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jpx\cjpx_decoder.h">
+      <Filter>Header Files\jpx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jpx\jpx_decode_utils.h">
+      <Filter>Header Files\jpx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\jpx\jpxmodule.h">
+      <Filter>Header Files\jpx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\core\fxcodec\scanlinedecoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{da94b002-20ea-4442-9597-b3a6c385d2eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{61696362-ae50-4de6-8c4e-3ce169f0f9a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\basic">
+      <UniqueIdentifier>{688b0e45-4ee0-4b36-8353-17abfd1ae6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fax">
+      <UniqueIdentifier>{6096c672-ee4e-47b3-b378-52f7dc36386d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\flate">
+      <UniqueIdentifier>{6007f475-b7ad-49e6-ada8-a092592c69fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\icc">
+      <UniqueIdentifier>{69a2f1a9-76c9-43ec-baa3-bbdbe9ddffed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jbig2">
+      <UniqueIdentifier>{6e39f234-77ed-42eb-a648-ebfe63bc0000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jpeg">
+      <UniqueIdentifier>{681ec5c3-b2d0-41a4-9620-aabca8ffff99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jpx">
+      <UniqueIdentifier>{6d2e10a7-3acf-420a-a601-4cd9fd9ca8ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\scanlinedecoder">
+      <UniqueIdentifier>{66259f57-8382-40fc-b7b7-053495ff8c31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\basic">
+      <UniqueIdentifier>{d88b0e45-4ee0-4b36-8353-17abfd1ae6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fax">
+      <UniqueIdentifier>{7096c672-ee4e-47b3-b378-52f7dc36386d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\flate">
+      <UniqueIdentifier>{8007f475-b7ad-49e6-ada8-a092592c69fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\icc">
+      <UniqueIdentifier>{b9a2f1a9-76c9-43ec-baa3-bbdbe9ddffed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jbig2">
+      <UniqueIdentifier>{3e39f234-77ed-42eb-a648-ebfe63bc0000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jpeg">
+      <UniqueIdentifier>{a81ec5c3-b2d0-41a4-9620-aabca8ffff99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jpx">
+      <UniqueIdentifier>{8d2e10a7-3acf-420a-a601-4cd9fd9ca8ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\scanlinedecoder">
+      <UniqueIdentifier>{16259f57-8382-40fc-b7b7-053495ff8c31}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

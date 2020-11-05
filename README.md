@@ -32,5 +32,13 @@ Use / Develop : Activate LibPdfium. Then Just sync and build !
 3. **visual studio.**   
 VS project files are configured by hand.
 
+# Build libpdfium.so using Visual Studio
+Yes, from now on you can build libpdfium.so right in the VS 2019 ! 
+### Build times : 
+- 3:45 minutes, release, -O3, 5.93 MB
+- 3:25 minutes, debug, 10.1 MB
+
+
+
 
 

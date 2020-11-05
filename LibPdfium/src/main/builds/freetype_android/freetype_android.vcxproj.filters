@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftbase.c">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftbitmap.c">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftdebug.c">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftglyph.c">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftinit.c">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftmm.c">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\base\ftsystem.c">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\cff\cff.c">
+      <Filter>Source Files\cff</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\cid\type1cid.c">
+      <Filter>Source Files\cid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\psaux\psaux.c">
+      <Filter>Source Files\psaux</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\pshinter\pshinter.c">
+      <Filter>Source Files\pshinter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\psnames\psmodule.c">
+      <Filter>Source Files\psnames</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\raster\raster.c">
+      <Filter>Source Files\raster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\sfnt\sfnt.c">
+      <Filter>Source Files\sfnt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\smooth\smooth.c">
+      <Filter>Source Files\smooth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\truetype\truetype.c">
+      <Filter>Source Files\truetype</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pdfium\third_party\freetype\src\src\type1\type1.c">
+      <Filter>Source Files\type1</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\src\base\ftbase.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pdfium\third_party\freetype\src\src\psnames\psmodule.h">
+      <Filter>Header Files\psnames</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{da94b002-20ea-4442-9597-b3a6c385d2eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{61696362-ae50-4de6-8c4e-3ce169f0f9a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\base">
+      <UniqueIdentifier>{688b0e45-4ee0-4b36-8353-17abfd1ae6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\psnames">
+      <UniqueIdentifier>{63871866-16d2-4923-800f-aacc806c72cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base">
+      <UniqueIdentifier>{d88b0e45-4ee0-4b36-8353-17abfd1ae6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cff">
+      <UniqueIdentifier>{7096c672-ee4e-47b3-b378-52f7dc36386d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cid">
+      <UniqueIdentifier>{993aa97d-b668-42d6-8917-0f511acad93c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\psaux">
+      <UniqueIdentifier>{65e2cace-a1c2-49e2-985c-bb79462b6975}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pshinter">
+      <UniqueIdentifier>{3cfc4f15-2295-4ec7-ae11-4d100e5ef7fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\psnames">
+      <UniqueIdentifier>{53871866-16d2-4923-800f-aacc806c72cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\raster">
+      <UniqueIdentifier>{382b6376-e24e-442f-9294-19fce179b121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sfnt">
+      <UniqueIdentifier>{5341b366-906b-4124-9d33-a68d43fde7ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\smooth">
+      <UniqueIdentifier>{73c986f7-e9c1-44bd-86bf-1b959f75d895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\truetype">
+      <UniqueIdentifier>{0190378a-98ed-4198-8c8a-a4e7a3d6038b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type1">
+      <UniqueIdentifier>{8d788e88-a095-45b9-9040-68a0b33aee4a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

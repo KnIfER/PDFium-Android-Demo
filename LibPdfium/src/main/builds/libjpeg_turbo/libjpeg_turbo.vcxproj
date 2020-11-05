@@ -499,6 +499,8 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -fwin$(PlatformArchitecture) -DWIN$(PlatformArchitecture)  -D__x86__ %(FullPath) -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\x86_64  -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\nasm  -o$(Platform)\$(Configuration)\%(Filename).obj</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">编译libjpeg_turbo(汇编)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\%(Filename).obj</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jccolor-sse2.asm">
       <FileType>Document</FileType>
@@ -514,6 +516,8 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -fwin$(PlatformArchitecture) -DWIN$(PlatformArchitecture)  -D__x86__ %(FullPath) -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\x86_64  -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\nasm  -o$(Platform)\$(Configuration)\%(Filename).obj</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">编译libjpeg_turbo(汇编)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\%(Filename).obj</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcgray-avx2.asm">
       <FileType>Document</FileType>
@@ -529,6 +533,8 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -fwin$(PlatformArchitecture) -DWIN$(PlatformArchitecture)  -D__x86__ %(FullPath) -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\x86_64  -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\nasm  -o$(Platform)\$(Configuration)\%(Filename).obj</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">编译libjpeg_turbo(汇编)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\%(Filename).obj</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcgray-sse2.asm">
       <FileType>Document</FileType>
@@ -544,6 +550,8 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -fwin$(PlatformArchitecture) -DWIN$(PlatformArchitecture)  -D__x86__ %(FullPath) -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\x86_64  -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\nasm  -o$(Platform)\$(Configuration)\%(Filename).obj</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">编译libjpeg_turbo(汇编)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\%(Filename).obj</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jchuff-sse2.asm">
       <FileType>Document</FileType>
@@ -559,6 +567,8 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -fwin$(PlatformArchitecture) -DWIN$(PlatformArchitecture)  -D__x86__ %(FullPath) -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\x86_64  -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\nasm  -o$(Platform)\$(Configuration)\%(Filename).obj</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">编译libjpeg_turbo(汇编)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\%(Filename).obj</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcphuff-sse2.asm">
       <FileType>Document</FileType>
@@ -574,6 +584,8 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">nasm.exe -fwin$(PlatformArchitecture) -DWIN$(PlatformArchitecture)  -D__x86__ %(FullPath) -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\x86_64  -i$(SolutionDir)pdfium\third_party\libjpeg_turbo\simd\nasm  -o$(Platform)\$(Configuration)\%(Filename).obj</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">编译libjpeg_turbo(汇编)</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\%(Filename).obj</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="..\..\pdfium\third_party\libjpeg_turbo\simd\x86_64\jcsample-avx2.asm">
       <FileType>Document</FileType>
