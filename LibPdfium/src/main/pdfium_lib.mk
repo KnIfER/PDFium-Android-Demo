@@ -8,7 +8,7 @@ LOCAL_ARM_MODE := arm
 LOCAL_NDK_STL_VARIANT := gnustl_static
 
 LIBS_CFLAGS += -O3 -fstrict-aliasing -fprefetch-loop-arrays -fexceptions
-LIBS_CFLAGS += -Wno-non-virtual-dtor -Wall
+LIBS_CFLAGS += -Wno-non-virtual-dtor -Wall -fPIC
 
 # Mask some warnings. These are benign, but we probably want to fix them
 # upstream at some point.

@@ -20,4 +20,6 @@ export NDKW=$NDK
 export PWDW=$PWD
 export SYSROOTW=$SYSROOT
 
+export arch=arm64
+
 make -j3 all

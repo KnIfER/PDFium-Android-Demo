@@ -128,6 +128,27 @@
     <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_special_button.h" />
     <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_wnd.h" />
     <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\ipwl_systemhandler.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdfview.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_annot.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_attachment.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_catalog.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_dataavail.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_doc.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_edit.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_ext.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_flatten.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_formfill.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_fwlevent.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_javascript.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_ppo.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_progressive.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_save.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_searchex.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_structtree.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_sysfontinfo.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_text.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_thumbnail.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_transformpage.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

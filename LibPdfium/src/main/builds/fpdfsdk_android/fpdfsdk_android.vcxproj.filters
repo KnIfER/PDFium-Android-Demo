@@ -318,6 +318,69 @@
     <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_wnd.h">
       <Filter>Header Files\pwl</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_annot.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_attachment.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_catalog.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_dataavail.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_doc.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_edit.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_ext.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_flatten.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_formfill.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_fwlevent.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_javascript.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_ppo.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_progressive.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_save.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_searchex.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_structtree.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_sysfontinfo.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_text.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_thumbnail.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_transformpage.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PDFIUM\public\fpdfview.h">
+      <Filter>Header FIles\SDK</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
@@ -337,6 +400,9 @@
     </Filter>
     <Filter Include="Header FIles\formfiller">
       <UniqueIdentifier>{ae9e7d22-74f3-4fdd-bd71-5c3b0c9ad19e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header FIles\SDK">
+      <UniqueIdentifier>{b263bb46-223a-420f-8ddc-a88e61fafb05}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

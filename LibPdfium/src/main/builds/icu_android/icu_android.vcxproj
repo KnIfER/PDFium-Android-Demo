@@ -745,8 +745,12 @@
     <TargetName>lib$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -794,12 +798,18 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common;..\..\pdfium\third_party\icu\source\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_STATIC_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_HIDE_DATA_SYMBOL;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;HAVE_DLOPEN=0;UCONFIG_ONLY_HTML_CONVERSION=1;UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0;U_CHARSET_IS_UTF8=1;U_ICUDATAENTRY_IN_COMMON;ANDROID</PreprocessorDefinitions>
+      <AdditionalOptions>-frtti %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\pdfium\third_party\zlib;..\..\pdfium\third_party\libjpeg_turbo;..\..\pdfium\third_party\freetype\include;..\..\pdfium;..\..\pdfium\third_party\freetype\src\include;..\..\pdfium\third_party\icu\source\common;..\..\pdfium\third_party\icu\source\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>U_USING_ICU_NAMESPACE=0;U_ENABLE_DYLOAD=0;USE_CHROMIUM_ICU=1;U_STATIC_IMPLEMENTATION;U_I18N_IMPLEMENTATION;U_COMMON_IMPLEMENTATION;U_HIDE_DATA_SYMBOL;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_FILE;HAVE_DLOPEN=0;UCONFIG_ONLY_HTML_CONVERSION=1;UCONFIG_USE_WINDOWS_LCID_MAPPING_API=0;U_CHARSET_IS_UTF8=1;U_ICUDATAENTRY_IN_COMMON;ANDROID</PreprocessorDefinitions>
+      <AdditionalOptions>-frtti %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -142,6 +142,27 @@
     <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_scroll_bar.h" />
     <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_special_button.h" />
     <ClInclude Include="..\..\pdfium\fpdfsdk\pwl\cpwl_wnd.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdfview.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_annot.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_attachment.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_catalog.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_dataavail.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_doc.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_edit.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_ext.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_flatten.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_formfill.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_fwlevent.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_javascript.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_ppo.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_progressive.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_save.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_searchex.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_structtree.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_sysfontinfo.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_text.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_thumbnail.h" />
+    <ClInclude Include="..\..\PDFIUM\public\fpdf_transformpage.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6A1E13F5-EBDE-4895-A2A5-715F50B29A65}</ProjectGuid>
@@ -174,6 +195,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_3_8</PlatformToolset>
+    <AndroidAPILevel>android-19</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -221,8 +243,12 @@
     <TargetName>libpdfium</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <TargetName>libpdfium</TargetName>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <TargetName>libpdfium</TargetName>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -280,13 +306,28 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../../pdfium/;../../pdfium/third_party/icu/source/i18n/;../../pdfium/third_party/icu/source/common/;../../pdfium/third_party/freetype/src/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>COMPONENT_BUILD;FPDF_IMPLEMENTATION;FPDFSDK_EXPORTS;ANDROID</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../$(Platform)/$(Configuration)/libpdfium_lib_android.a;../../$(Platform)/$(Configuration)/libfxcodec_android.a;../../$(Platform)/$(Configuration)/liblibjpeg_android.a;../../$(Platform)/$(Configuration)/libzlib_android.a;../../$(Platform)/$(Configuration)/libpdfium_base_android.a;../../$(Platform)/$(Configuration)/libagg23_android.a;../../$(Platform)/$(Configuration)/liblibopenjpeg20_android.a;../../$(Platform)/$(Configuration)/liblcms_android.a;../../$(Platform)/$(Configuration)/libfreetype_android.a;../../$(Platform)/$(Configuration)/libicu_android.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <LibraryDependencies>c++_static;c++abi;log;m;</LibraryDependencies>
+      <AdditionalLibraryDirectories>../../$(Platform)/$(Configuration);%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName);$(StlLibraryPath)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../../pdfium/;../../pdfium/third_party/icu/source/i18n/;../../pdfium/third_party/icu/source/common/;../../pdfium/third_party/freetype/src/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>COMPONENT_BUILD;FPDF_IMPLEMENTATION;FPDFSDK_EXPORTS;ANDROID;random=random;ANDROID_API=19</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../$(Platform)/$(Configuration)/libpdfium_lib_android.a;../../$(Platform)/$(Configuration)/libfxcodec_android.a;../../$(Platform)/$(Configuration)/liblibjpeg_android.a;../../$(Platform)/$(Configuration)/libzlib_android.a;../../$(Platform)/$(Configuration)/libpdfium_base_android.a;../../$(Platform)/$(Configuration)/libagg23_android.a;../../$(Platform)/$(Configuration)/liblibopenjpeg20_android.a;../../$(Platform)/$(Configuration)/liblcms_android.a;../../$(Platform)/$(Configuration)/libfreetype_android.a;../../$(Platform)/$(Configuration)/libicu_android.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <LibraryDependencies>c++_static;c++abi;log;m;</LibraryDependencies>
+      <AdditionalLibraryDirectories>../../$(Platform)/$(Configuration);%(AdditionalLibraryDirectories);$(ToolchainPrebuiltPath)\lib\gcc\$(ToolchainName)\$(ToolchainFullVersionName);$(StlLibraryPath)</AdditionalLibraryDirectories>
+      <AdditionalOptions>-v %(AdditionalOptions)</AdditionalOptions>
+    </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

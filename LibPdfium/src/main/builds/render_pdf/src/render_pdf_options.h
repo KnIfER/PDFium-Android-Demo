@@ -14,10 +14,9 @@ enum class ImageFormat {
 
 struct PageRange {
 
-private:
+public:
 	int _from;
 	int _to;
-public:
 	PageRange(const std::string& range_str = "");
 	bool isAll() const;
 	std::tuple<int, int> get(FPDF_DOCUMENT doc);
@@ -26,7 +25,6 @@ public:
 
 struct RenderPdfOptions {
 
-private:
 	std::string _input_file;
 	std::string _output_file_directory;
 	std::string _output_file_stem;

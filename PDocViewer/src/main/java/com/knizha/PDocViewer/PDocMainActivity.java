@@ -34,6 +34,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.knizha.PDocViewer.link.DefaultLinkHandler;
 import com.knizha.PDocViewer.listener.OnLoadCompleteListener;
 import com.knizha.PDocViewer.listener.OnPageChangeListener;
 import com.knizha.PDocViewer.listener.OnPageErrorListener;
@@ -42,6 +43,7 @@ import com.knizha.PDocViewer.util.FitPolicy;
 import com.knziha.PDocViewer.R;
 import com.shockwave.pdfium.PdfDocument;
 
+import java.io.File;
 import java.util.List;
 
 public class PDocMainActivity extends AppCompatActivity implements OnPageChangeListener, OnLoadCompleteListener,
@@ -61,6 +63,7 @@ public class PDocMainActivity extends AppCompatActivity implements OnPageChangeL
 		setContentView(R.layout.activity_main);
 		this.pDocView = findViewById(R.id.pdfView);
 		pDocView.setBackgroundColor(Color.LTGRAY);
+		uri = Uri.fromFile(new File("/sdcard/myFolder/Gpu Pro 1.pdf"));
 		if (uri != null) {
 			displayFromUri(uri);
 		} else {
@@ -142,6 +145,7 @@ public class PDocMainActivity extends AppCompatActivity implements OnPageChangeL
                 .scrollHandle(new DefaultScrollHandle(this))
                 .spacing(10) // in dp
                 .onPageError(this)
+				.linkHandler(new DefaultLinkHandler(pDocView))
                 .load();
     }
 	

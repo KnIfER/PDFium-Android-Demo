@@ -128,8 +128,12 @@
     <TargetName>lib$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <UseMultiToolTask>true</UseMultiToolTask>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -175,12 +179,16 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../../pdfium/third_party/freetype/;../../pdfium/third_party/freetype/include;../../pdfium/third_party/freetype/src/include;../../pdfium/third_party/freetype/src/include/freetype;../../pdfium/third_party/freetype/src/include/freetype/internal;../../pdfium/third_party/freetype/src/include/freetype/internal/services;../../pdfium/third_party/freetype/src/src/;../../pdfium/third_party/freetype/src/src/base;../../pdfium/third_party/freetype/src/src/cff</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FT2_BUILD_LIBRARY</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../../pdfium/third_party/freetype/;../../pdfium/third_party/freetype/include;../../pdfium/third_party/freetype/src/include;../../pdfium/third_party/freetype/src/include/freetype;../../pdfium/third_party/freetype/src/include/freetype/internal;../../pdfium/third_party/freetype/src/include/freetype/internal/services;../../pdfium/third_party/freetype/src/src/;../../pdfium/third_party/freetype/src/src/base;../../pdfium/third_party/freetype/src/src/cff</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>FT2_BUILD_LIBRARY</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

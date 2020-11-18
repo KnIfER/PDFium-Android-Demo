@@ -9,6 +9,21 @@ CC := $(TOOLCHAIN)/bin/$(_ARCH_CC_)
 
 AR := $(TOOLCHAIN)/bin/aarch64-linux-android-ar.exe
 
+
+ifeq ($(arch), armv7a)
+	_ARCH_PX_ := armv7a
+	_TARGETRI_ := armv7a-linux-androideabi
+	_ARCH_CC_ := $(_TARGETRI_)19-clang
+	CC := $(TOOLCHAIN)/bin/$(_ARCH_CC_)
+	AR := $(TOOLCHAIN)/bin/arm-linux-androideabi-ar.exe
+endif
+
+
+
+
+
+
+
 ifeq ($(WIN), 1)
 	PWDW := $(shell echo $(PWDW) | sed -E 's/^\/mnt\/([a-z])/\1:/g')
 	NDKW := $(shell echo $(NDKW) | sed -E 's/^\/mnt\/([a-z])/\1:/g')
@@ -31,7 +46,7 @@ pdfium_3rd_libs = \
 	libpdfiumlcms.a\
 	libpdfiumicu.a\
 	libpdfiumagg23.a\
-	libpdfiumjpeg_turbo.a\
+	libpdfiumjpeg.a\
 
 	
 pdfiumlibs = \
